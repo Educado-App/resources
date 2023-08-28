@@ -27,3 +27,7 @@
 
 ## Course Recommendation Team
 - Utilize Regression Models to find relevant courses
+
+## certificate issuance system
+- [APP] Backend
+- Create a microservice that enables the platform issue certificates on learner progress
