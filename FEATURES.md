@@ -3,13 +3,11 @@
 ## Table of Contents
 
 1. **Video Streaming**
-2. **Institutional Onboarding**
-3. **Social Community**
-4. **Gamification**
-5. **Audio to Text**
-6. **Integration / Stabilization Team**
-7. **Course Recommendation Team**
-8. **Certificate Issuance System**
+2. **Institutional Onboarding** 
+3. **Gamification & Socials** 
+4. **Text to Audio** 
+5. **Virtual Tutor** 
+6. **Certificate Issuance System** 
 
 ---
 
