@@ -8,6 +8,7 @@
 - [Audio to Text](#audio-to-text)
 - [Virtual Tutor](#virtual-tutor)
 - [Certificate Issuance System](#certificate-issuance-system)
+- [Mobile Offline Mode](#mobile-offline-mode)
 
 ---
 
@@ -98,6 +99,22 @@ A testament to recognizing learners' efforts, this feature automates the certifi
 - **Prompt Notifications**: Automated notifications keep learners informed of their achievements.
 - **Secure Archiving**: All certificates are securely archived for future access.
 
+## 7. Mobile Offline Mode
+
+### Overview
+The Mobile Offline Mode is designed to ensure continuous access to Educado's resources, even in the absence of an internet connection. Tailored for users with inconsistent internet access, especially in underprivileged areas, this feature ensures uninterrupted learning.
+
+#### Features:
+
+- **Download & Go**: Courses, videos, quizzes, and other materials can be downloaded directly to devices, enabling offline access.
+  
+- **Sync When Online**: All offline progress, such as completed quizzes or courses, will automatically sync to the user's account once they regain connectivity.
+  
+- **Storage Management**: The app provides a breakdown of storage used by the downloaded content, with options to manage and free up device space.
+  
+- **Daily Learning Reminders**: Even offline, the app dispatches reminders to keep users engaged in their learning journey.
+  
+- **Search Offline**: A robust offline search functionality ensures users can find and access their downloaded content effortlessly.
 ---
 
 By incorporating these features into E23, the platform aims to offer an enriched learning experience, foster a sense of community, and provide learners with valuable tools to enhance their skills and knowledge.
