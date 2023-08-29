@@ -99,7 +99,7 @@ A testament to recognizing learners' efforts, this feature automates the certifi
 - **Prompt Notifications**: Automated notifications keep learners informed of their achievements.
 - **Secure Archiving**: All certificates are securely archived for future access.
 
-## 7. Mobile Offline Mode
+## Mobile Offline Mode
 
 ### Overview
 The Mobile Offline Mode is designed to ensure continuous access to Educado's resources, even in the absence of an internet connection. Tailored for users with inconsistent internet access, especially in underprivileged areas, this feature ensures uninterrupted learning.
