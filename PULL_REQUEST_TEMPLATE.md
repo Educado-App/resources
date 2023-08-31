@@ -29,7 +29,3 @@ Insert screenshots or gifs that visually demonstrate the changes made in this pu
 ## Notes for Reviewers
 
 Provide any additional information that could be useful for reviewers. This could include context about the problem being solved, implementation details, or anything else that might aid in the review process.
-
----
-
-Feel free to customize this template to match the specific needs and conventions of your project.
