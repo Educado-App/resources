@@ -26,10 +26,4 @@ We value respectful and inclusive collaboration. Our Code of Conduct sets the ex
 
 If you're contributing code to our project, this pull request template streamlines the process. It helps you provide the necessary context about your changes, making it easier for our team to review and merge your contributions smoothly.
 
-### REPO_STRUCTURE.md
-
-[Go to Repository Structure Outline](./REPO_STRUCTURE.md)
-
-For newcomers and contributors, understanding the repository structure is crucial. This file provides insights into how the files and directories are organized, helping everyone navigate the repository and find what they're looking for efficiently.
-
 Feel free to explore these files, contribute to our project, and be part of our vibrant community. Your input is valuable to us, and together we can shape the future of ProjectX!
