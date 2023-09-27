@@ -37,7 +37,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 ## E01 Login Errors
 
 - **E0101** Invalid username or password.
-- **E0102** Account is locked due to multiple failed login attempts.
+- **E0102** Account is locked due to multiple failed login attempts. Please try again later.
 - (**E0103** Account is not verified. Please check your email for a verification link.)
 - (**E0104** Account is suspended or blocked by an administrator.)
 
