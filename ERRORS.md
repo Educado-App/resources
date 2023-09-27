@@ -25,7 +25,7 @@ json_response: {
 }
 ```
 
-Both the frontend(s) and backend contain an `error_codes.js` file, implementing the codes listed in this document. These can be used to easily import and use error codes.
+Both the frontend(s) and backend contain an `errorCodes.js` file, implementing the codes listed in this document. These can be used to easily import and use error codes.
 
 > Error codes shown in parenthesis are reserved, but have not been implemented yet.
 
