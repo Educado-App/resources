@@ -30,7 +30,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 > Error codes shown in parenthesis are reserved, but have not been implemented yet.
 
 ## E00 General Authentication Errors
-
+- **E0000** Unknown error
 - **E0001** Authentication token is invalid or expired.
 - **E0002** User's role does not have the necessary permissions for this action.
 
