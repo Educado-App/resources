@@ -29,17 +29,19 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 
 > Error codes shown in parenthesis are reserved, but have not been implemented yet.
 
-## E00 General Authentication Errors
+## E00 General errors
 - **E0000** Unknown error
 - **E0001** Authentication token is invalid or expired.
 - **E0002** User's role does not have the necessary permissions for this action.
+- **E0003** Server could not be reached.
 
 ## E01 Login Errors
 
-- **E0101** Invalid username or password.
+- **E0101** Invalid email.
 - **E0102** Account is locked due to multiple failed login attempts. Please try again later.
 - (**E0103** Account is not verified. Please check your email for a verification link.)
 - (**E0104** Account is suspended or blocked by an administrator.)
+- **E0105** Invalid password.
 
 ## E02 Signup Errors
 
@@ -48,6 +50,13 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0203** Invalid email format.
 - (**E0204** User registration is currently disabled.)
 - (**E0205** Could not send a verification email. Please try again later.)
+- **E0206** Email must contain "@" and ".".
+- **E0207** Email must be atleast 6 characters.
+- **E0208** Email is required
+- **E0209** First and last name are required
+- **E0210** Names must be between 1 and 50 characters.
+- **E0211** Names must only contain letters, spaces, hyphens and apostrophes.
+- **E0212** Password is required
 
 ## E03 Logout Errors
 
