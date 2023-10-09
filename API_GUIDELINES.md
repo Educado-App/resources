@@ -1,6 +1,6 @@
 # Educado REST API Guidelines
 
-*Based on [Microsoft Azure's REST API guidelines]('https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md')*
+*Based on [Microsoft Azure's REST API guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md)*
 
 This document is in the process of being tailored to Educado's specific needs. As such some guidelines may still be aimed towards Microsoft Azure development. Please feel free to propose changes.
 
