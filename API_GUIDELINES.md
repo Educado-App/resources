@@ -2,6 +2,8 @@
 
 *Based on [Microsoft Azure's REST API guidelines]('https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md')*
 
+This document is in the process of being tailored to Educado's specific needs. As such some guidelines may still be aimed towards Microsoft Azure development. Please feel free to propose changes.
+
 <!-- cspell:ignore autorest, BYOS, etag, idempotency, maxpagesize, innererror, trippable, nextlink, condreq, etags -->
 <!-- markdownlint-disable MD033 MD049 -->
 
@@ -36,39 +38,37 @@ Please ensure that you add an anchor tag to any new guidelines that you add and 
 
 ## Introduction
 
-These guidelines apply to Azure service teams implementing _data plane_ APIs. They offer prescriptive guidance that Azure service teams MUST follow ensuring that customers have a great experience by designing APIs meeting these goals:
+These guidelines apply to Educado teams implementing _data plane_ APIs. They offer prescriptive guidance that Educado teams MUST follow ensuring that other developers have a great experience by designing APIs meeting these goals:
 - Developer friendly via consistent patterns & web standards (HTTP, REST, JSON)
 - Efficient & cost-effective
 - Work well with SDKs in many programming languages
-- Customers can create fault-tolerant apps by supporting retries/idempotency/optimistic concurrency
+- Developers can create fault-tolerant apps by supporting retries/idempotency/optimistic concurrency
 - Sustainable & versionable via clear API contracts with 2 requirements:
-  1. Customer workloads must never break due to a service change
-  2. Customers can adopt a version without requiring code changes
-Technology and software is constantly changing and evolving, and as such, this is intended to be a living document. [Open an issue](https://github.com/microsoft/api-guidelines/issues/new/choose) to suggest a change or propose a new idea. Please read the [Considerations for Service Design](./ConsiderationsForServiceDesign.md) for an introduction to the topic of API design for Azure services. *For an existing GA'd service, don't change/break its existing API; instead, leverage these concepts for future APIs while prioritizing consistency within your existing service.*
-
-*Note: If you are creating a management plane (ARM) API, please refer to the [Azure Resource Manager Resource Provider Contract](https://github.com/Azure/azure-resource-manager-rpc).*
+  1. Developer workloads must never break due to a service change
+  2. Developers can adopt a version without requiring code changes
+Technology and software is constantly changing and evolving, and as such, this is intended to be a living document. [Open an issue](https://github.com/educado-App/resources/issues/new/choose) to suggest a change or propose a new idea (be sure to use [the template](https://github.com/Educado-App/resources/blob/main/ISSUE_TEMPLATE.md)).
 
 ### Prescriptive Guidance
 This document offers prescriptive guidance labeled as follows:
 
-:white_check_mark: **DO** adopt this pattern. If you feel you need an exception, contact the Azure HTTP/REST Stewardship Board **prior** to implementation.
+:white_check_mark: **DO** adopt this pattern. If you feel you need an exception, please consult the integration team.
 
-:ballot_box_with_check: **YOU SHOULD** adopt this pattern. If not following this advice, you MUST disclose your reason during the Azure HTTP/REST Stewardship Board review.
+:ballot_box_with_check: **YOU SHOULD** adopt this pattern. If not following this advice, please consult the integration team.
 
-:heavy_check_mark: **YOU MAY** consider this pattern if appropriate to your situation. No notification to the Azure HTTP/REST Stewardship Board is required.
+:heavy_check_mark: **YOU MAY** consider this pattern if appropriate to your situation. No notification to the integration team is required.
 
-:warning: **YOU SHOULD NOT** adopt this pattern. If not following this advice, you MUST disclose your reason during the Azure HTTP/REST Stewardship Board review.
+:warning: **YOU SHOULD NOT** adopt this pattern. If not following this advice, please consult the integration team.
 
-:no_entry: **DO NOT** adopt this pattern. If you feel you need an exception, contact the Azure HTTP/REST Stewardship Board **prior** to implementation.
+:no_entry: **DO NOT** adopt this pattern. If you feel you need an exception, please consult the integration team.
 
-*If you feel you need an exception, or need clarity based on your situation, please contact the Azure HTTP/REST Stewardship Board **prior** to release of your API.*
+*If you feel you need an exception, or need clarity based on your situation, please notify the integration team.*
 
 ## Building Blocks: HTTP, REST, & JSON
-The Microsoft Azure Cloud platform exposes its APIs through the core building blocks of the Internet; namely HTTP, REST, and JSON. This section provides you with a general understanding of how these technologies should be applied when creating your service.
+The Educado platform exposes its APIs through the core building blocks of the Internet; namely HTTP, REST, and JSON. This section provides you with a general understanding of how these technologies should be applied when creating your service.
 
 <a href="#http" name="http"></a>
 ### HTTP
-Azure services must adhere to the HTTP specification, [RFC7231](https://tools.ietf.org/html/rfc7231). This section further refines and constrains how service implementors should apply the constructs defined in the HTTP specification. It is therefore, important that you have a firm understanding of the following concepts:
+Educado services must adhere to the HTTP specification, [RFC7231](https://tools.ietf.org/html/rfc7231). This section further refines and constrains how service implementors should apply the constructs defined in the HTTP specification. It is therefore, important that you have a firm understanding of the following concepts:
 
 - [Uniform Resource Locators (URLs)](#uniform-resource-locators-urls)
 - [HTTP Request / Response Pattern](#http-request--response-pattern)
@@ -190,7 +190,7 @@ Byte array | Base-64 encoded, max length
 Array      | One of a) a comma-separated list of values (preferred), or b) separate `name=value` parameter instances for each value of the array
 
 
-The table below lists the headers most used by Azure services:
+The table below lists the headers most used by Microsoft Azure services:
 
 Header Key          | Applies to | Example
 ------------------- | ---------- | -------------
@@ -210,7 +210,7 @@ _x-ms-request-id_   | Response   | 4227cdc5-9f48-4e84-921a-10967cb785a0
 ETag                | Response   | "67ab43" (see [Conditional Requests](#conditional-requests))
 last-modified       | Response   | Sun, 06 Nov 1994 08:49:37 GMT
 _x-ms-error-code_   | Response   | (see [Handling Errors](#handling-errors))
-_azure-deprecating_ | Response   | (see [Deprecating Behavior Notification](#deprecating-behavior-notification))
+azure-deprecating   | Response   | (see [Deprecating Behavior Notification](#deprecating-behavior-notification))
 retry-after         | Response   | 180 (see [RFC 7231, Section 7.1.3](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.3))
 
 <a href="#http-header-support-standard-headers" name="http-header-support-standard-headers">:white_check_mark:</a> **DO** support all headers shown in _italics_
@@ -254,7 +254,7 @@ When designing your service, it is important to optimize for the developer using
 
 <a href="#rest-specify-string-value-constraints" name="rest-specify-string-value-constraints">:white_check_mark:</a> **DO** establish clear contracts for string values
 
-<a href="#rest-use-standard-status-codes" name="rest-use-standard-status-codes">:white_check_mark:</a> **DO** use proper response codes/bodies so customer can diagnose their own problems and fix them without contacting Azure support or the service team
+<a href="#rest-use-standard-status-codes" name="rest-use-standard-status-codes">:white_check_mark:</a> **DO** use proper response codes/bodies so developers can diagnose their own problems and fix them
 
 #### Resource Schema & Field Mutability
 
@@ -308,8 +308,10 @@ PUT | Overwrite resource entirely using Create/Update fields | `200-OK`
 
 #### Handling Errors
 There are 2 kinds of errors:
-- An error where you expect customer code to gracefully recover at runtime
-- An error indicating a bug in customer code that is unlikely to be recoverable at runtime; the customer must just fix their code
+- An error where you expect another developer's code to gracefully recover at runtime
+- An error indicating a bug in the developer's code that is unlikely to be recoverable at runtime; the developer must just fix their code
+
+**Please read [ERRORS.md](./ERRORS.md)!**
 
 <a href="#rest-error-code-header" name="rest-error-code-header">:white_check_mark:</a> **DO** return an `x-ms-error-code` response header with a string error code indicating what went wrong.
 
@@ -337,8 +339,8 @@ Property | Type | Required | Description
 
 Property | Type | Required | Description
 -------- | ---- | :------: | -----------
-`code` | String | ✔ | One of a server-defined set of error codes.
-`message` | String | ✔ | A human-readable representation of the error.
+`code` | String | ✔ | One of the error codes defined in [ERRORS.md](./ERRORS.md).
+`message` | String | ✔ | A human-readable representation of the error, also found in [ERRORS.md](./ERRORS.md).
 `target` | String |  | The target of the error.
 `details` | ErrorDetail[] |  | An array of details about specific errors that led to this reported error.
 `innererror` | InnerError |  | An object containing more specific information than the current object about the error.
@@ -355,18 +357,20 @@ Example:
 ```json
 {
   "error": {
-    "code": "InvalidPasswordFormat",
-    "message": "Human-readable description",
+    "code": "E0101",
+    "message": "Invalid email",
     "target": "target of error",
     "innererror": {
-      "code": "PasswordTooShort",
-      "minLength": 6,
+      "code": "E0199",
+      "minLength": 8,
     }
   }
 }
 ```
 
-<a href="#rest-document-error-code-values" name="rest-document-error-code-values">:white_check_mark:</a> **DO** document the service's top-level error code strings; they are part of the API contract.
+<a href="#rest-document-error-code-values" name="rest-document-error-code-values">:white_check_mark:</a> **DO** use the `errorCodes.js` file in your respective repository to implement the use of error codes. It contains the error codes from ERRORS.md, as well as their respective descriptions. If you wish to add an error code, please consult the integration team, and **be sure to add it to ERRORS.md.**
+
+> Note: In the future a helper function for generating full error objects should be developed.
 
 <a href="#rest-error-non-api-contract-fields" name="rest-error-non-api-contract-fields">:heavy_check_mark:</a> **YOU MAY** treat the other fields as you wish as they are _not_ considered part of your service's API contract and customers should not take a dependency on them or their value. They exist to help customers self-diagnose issues.
 
@@ -475,7 +479,7 @@ Below is an example of JSON for a Rectangle and Circle with a discriminator fiel
 ```
 Both Rectangle and Circle have common fields: `kind`, `fillColor`, `lineColor`, and `subscription`. A Rectangle also has `x`, `y`, `width`, and `length` while a Circle has `x`, `y`, and `radius`. The `subscription` is a nested polymorphic type. A `free` subscription has no additional fields and a `paid` subscription has `expiration` and `invoice` fields.
 
-The [Azure Naming Guidelines](./ConsiderationsForServiceDesign.md#common-names) recommend that the discriminator field be named `kind`.
+The [Azure Naming Guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/azure/ConsiderationsForServiceDesign.md#common-names) recommend that the discriminator field be named `kind`.
 
 <a href="#json-polymorphism-kind-extensible" name="json-polymorphism-kind-extensible">:ballot_box_with_check:</a> **YOU SHOULD** define the discriminator field of a polymorphic type to be an extensible enum.
 
@@ -1094,25 +1098,3 @@ While it may be tempting to use a revision/version number for the resource as th
 <a href="#condreq-weak-etags-allowed" name="condreq-weak-etags-allowed">:heavy_check_mark:</a> **YOU MAY** consider Weak ETags if you have a valid scenario for distinguishing between meaningful and cosmetic changes or if it is too expensive to compute a hash.
 
 <a href="#condreq-etag-depends-on-encoding" name="condreq-etag-depends-on-encoding">:white_check_mark:</a> **DO**, when supporting multiple representations (e.g. Content-Encodings) for the same resource, generate different ETag values for the different representations.
-
-<a href="#telemetry" name="telemetry"></a>
-### Distributed Tracing & Telemetry
-Azure SDK client guidelines specify that client libraries must send telemetry data through the `User-Agent` header, `X-MS-UserAgent` header, and Open Telemetry.
-Client libraries are required to send telemetry and distributed tracing information on every  request. Telemetry information is vital to the effective operation of your service and should be a consideration from the outset of design and implementation efforts.
-
-<a href="#telemetry-headers" name="telemetry-headers">:white_check_mark:</a> **DO** follow the Azure SDK client guidelines for supporting telemetry headers and Open Telemetry.
-
-<a href="#telemetry-allow-unrecognized-headers" name="telemetry-allow-unrecognized-headers">:no_entry:</a> **DO NOT** reject a call if you have custom headers you don't understand, and specifically, distributed tracing headers.
-
-**Additional References**
-- [Azure SDK client guidelines](https://azure.github.io/azure-sdk/general_azurecore.html)
-- [Azure SDK User-Agent header policy](https://azure.github.io/azure-sdk/general_azurecore.html#azurecore-http-telemetry-x-ms-useragent)
-- [Azure SDK Distributed tracing policy](https://azure.github.io/azure-sdk/general_azurecore.html#distributed-tracing-policy)
-- [Open Telemetry](https://opentelemetry.io/)
-
-In addition to distributed tracing, Azure also uses a set of common correlation headers:
-
-|Name                         |Applies to|Description|
-|-----------------------------|----------|-----------|
-|x-ms-client-request-id       |Both      |Optional. Caller-specified value identifying the request, in the form of a GUID with no decoration such as curly braces (e.g. `x-ms-client-request-id: 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0`). If the caller provides this header the service **must** include this in their log entries to facilitate correlation of log entries for a single request. Because this header can be client-generated, it should not be assumed to be unique by the service implementation.
-|x-ms-request-id              |Response  |Required. Service generated correlation id identifying the request, in the form of a GUID with no decoration such as curly braces. In contrast to the the `x-ms-client-request-id`, the service **must** ensure that this value is globally unique. Services should log this value with their traces to facilitate correlation of log entries for a single request.
