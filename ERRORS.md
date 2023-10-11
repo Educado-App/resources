@@ -34,6 +34,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0001** Authentication token is invalid or expired.
 - **E0002** User's role does not have the necessary permissions for this action.
 - **E0003** Server could not be reached.
+- **E0004** User not found.
 
 ## E01 Login Errors
 
