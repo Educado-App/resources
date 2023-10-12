@@ -11,6 +11,7 @@ Guidelines includes focus on structuring your tests using  to help you write eff
 | Date        | Notes                                                                        |
 | ----------- | ---------------------------------------------------------------------------- |
 | 2023-Oct-12 | 1st release of testing guidelines                                            |
+| 2023-Oct-12 | Changed formulation of test cases                                            |
 
 </details>
 
@@ -72,17 +73,17 @@ used to define an individual test within a test suite. The test case should cont
 
 ```javascript
 describe('Cats', () => {
-    it('Should scratch when angry', () => {
+    it('Scratches when angry', () => {
         // specific test here
     });
 
-    it('Should meow when hungry', () => {
+    it('Meows when hungry', () => {
         // specific test here
     });
 });
 
 describe('Dogs', () => {
-    it('Should bark when bored', () => {
+    it('Barks when bored', () => {
         // specific test here
     });
 });
@@ -107,11 +108,11 @@ describe('Cats', () => {
         // initializations/setup before all test in this block
     });
 
-    it('Should scratch when angry', () => {
+    it('Scratches when angry', () => {
         // specific test here
     });
 
-    it('Should meow when hungry', () => {
+    it('Meows when hungry', () => {
         // specific test here
     });
 });
@@ -122,7 +123,7 @@ describe('Dogs', () => {
         // initializations/setup before all test in this block
     });
 
-    it('Should bark when bored', () => {
+    it('Barks when bored', () => {
         // specific test here
     });
 });
@@ -142,7 +143,7 @@ describe('Dogs', () => {
         // initializations/setup before all test in this block
     });
 
-    it('Should bark when bored', () => {
+    it('Barks when bored', () => {
         // specific test here
     });
 
@@ -169,7 +170,7 @@ describe('Dogs', () => {
         // set up resource or start state
     });
 
-    it('Should bark when bored', () => {
+    it('Barks when bored', () => {
         // specific test here
     });
 
@@ -197,7 +198,7 @@ describe('Dogs', () => {
         // set up resource or start state
     });
 
-    it('Should bark when bored', () => {
+    it('Barks when bored', () => {
         // specific test here
     });
 
