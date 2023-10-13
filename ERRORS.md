@@ -87,3 +87,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - 	**E0602** Could not unsubscribe to course.
 -   **E0603** Could not get users subscriptions.
 -   **E0604** Could not check users subscriptions.
+
+## E07 Point System Errors
+-  **E0701** Points added is less than or equal to 0.
+-  **E0702** Points must be of type integer.
+-  **E0703** Points are required.
