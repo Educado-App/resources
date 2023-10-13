@@ -35,6 +35,11 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0002** User's role does not have the necessary permissions for this action.
 - **E0003** Server could not be reached.
 - **E0004** User not found.
+- **E0005** No courses found
+- **E0006** Course not found.
+- **E0007** No sections not found.
+- **E0008** Section not found.
+- **E0009** Course does not contain sections.
 
 ## E01 Login Errors
 
@@ -76,3 +81,9 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0501** Account is already verified.
 - **E0502** Verification link has expired.
 - **E0503** Verification link is invalid or has already been used.
+
+## E06 Subscriptions Errors
+- 	**E0601** Could not subscribe to course.
+- 	**E0602** Could not unsubscribe to course.
+-   **E0603** Could not get users subscriptions.
+-   **E0604** Could not check users subscriptions.
