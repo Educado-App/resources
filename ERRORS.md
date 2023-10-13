@@ -92,3 +92,4 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 -  **E0701** Points added is less than or equal to 0.
 -  **E0702** Points must be of type integer.
 -  **E0703** Points are required.
+-  **E0704** Max level reached.
