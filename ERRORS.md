@@ -37,7 +37,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0004** User not found.
 - **E0005** No courses found
 - **E0006** Course not found.
-- **E0007** No sections not found.
+- **E0007** No sections found.
 - **E0008** Section not found.
 - **E0009** Course does not contain sections.
 
