@@ -40,6 +40,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0007** No sections found.
 - **E0008** Section not found.
 - **E0009** Course does not contain sections.
+- **E0010** Email could not be sent.
 
 ## E01 Login Errors
 
@@ -63,6 +64,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0210** Names must be between 1 and 50 characters.
 - **E0211** Names must only contain letters, spaces, hyphens and apostrophes.
 - **E0212** Password is required
+- **E0213** Password must be at least 8 characters.
+- **E0214** Password must contain at least one letter.
 
 ## E03 Logout Errors
 
@@ -75,6 +78,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0403** Password reset link is invalid or has already been used.
 - **E0404** Password reset code has expired.
 - **E0405** Password reset code is invalid or has already been used.
+- **E0406** Too many requests. Please try again later.
 
 ## E05 Verification Errors
 
@@ -83,13 +87,17 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0503** Verification link is invalid or has already been used.
 
 ## E06 Subscriptions Errors
-- 	**E0601** Could not subscribe to course.
-- 	**E0602** Could not unsubscribe to course.
--   **E0603** Could not get users subscriptions.
--   **E0604** Could not check users subscriptions.
+- **E0601** Could not subscribe to course.
+- **E0602** Could not unsubscribe to course.
+- **E0603** Could not get users subscriptions.
+- **E0604** Could not check users subscriptions.
 
 ## E07 Point System Errors
 -  **E0701** Points added is less than or equal to 0.
 -  **E0702** Points must be of type integer.
 -  **E0703** Points are required.
 -  **E0704** Max level reached.
+
+## E08 Model Update Errors
+-  **E0801** Attempted to update illegal field name.
+-  **E0802** Field value is identical to the current value.
