@@ -41,6 +41,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0008** Section not found.
 - **E0009** Course does not contain sections.
 - **E0010** Email could not be sent.
+- **E0011** No exercises found.
+- **E0012** Exercise not found.
 
 ## E01 Login Errors
 
@@ -101,3 +103,6 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 ## E08 Model Update Errors
 -  **E0801** Attempted to update illegal field name.
 -  **E0802** Field value is identical to the current value.
+
+## E09 Answer Exercises Errors
+- **E0901** This exercise is already in completedExercises.
