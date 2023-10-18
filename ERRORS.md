@@ -43,6 +43,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0010** Email could not be sent.
 - **E0011** No exercises found.
 - **E0012** Exercise not found.
+- **E0013** Content creator not found
 
 ## E01 Login Errors
 
