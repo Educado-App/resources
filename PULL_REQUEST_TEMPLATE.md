@@ -26,6 +26,18 @@ List any related issues or tickets that this pull request addresses or resolves.
 
 Insert screenshots or gifs that visually demonstrate the changes made in this pull request.
 
+## If mobile/frontend pull request, what version of the backend is it stable, and running on? 
+
+Please provide information on what BACKEND branch and what BACKEND commit id this mobile/frontend Pull Request is stable on for reviewers.
+
+Commit id can be found under branch --> commits. 
+
+Example:
+
+Branch: staging
+
+Commit id: f0013e8
+
 ## Notes for Reviewers
 
 Provide any additional information that could be useful for reviewers. This could include context about the problem being solved, implementation details, or anything else that might aid in the review process.
