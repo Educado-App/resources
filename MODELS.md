@@ -32,7 +32,7 @@
 | subscriptions | `Array[ObjectId]` | All courses the user is currently subscribed to. ||| An `Array` of ids for the courses.
 | points | `Number` | User's points. | ✔ | | Any positive 'Number'. |
 | level | `Number` | User's level. | ✔ | | Any positive 'Number'. |
-| completedCourses | `Array` | List of completed courses, sections, and exercises. ||| An `Array` of objects with `courseId`, `completedSections`, and `completedExercises`. |
+| completedCourses | `Array` | List of completed courses, sections, and exercises. | ✔ || An `Array` of objects with `courseId`, `completedSections`, and `completedExercises`. |
   - courseId | `ObjectId` | Identifier for the completed course. ||| A 12-byte hexadecimal `string`. |
   - completedSections | `Array` | List of completed sections within the course. ||| An `Array` of objects with `sectionId` and `completedExercises`. |
     - sectionId | `ObjectId` | Identifier for the completed section. ||| A 12-byte hexadecimal `string`. |
