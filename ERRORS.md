@@ -94,8 +94,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0602** Could not unsubscribe to course.
 - **E0603** Could not get users subscriptions.
 - **E0604** Could not check users subscriptions.
-- **E0605** Cannot subscribe to this course: User has already subscribed to the course.
-- **E0606** Cannot unsubscribe from this course: User is not subscribed to the course.
+- **E0605** Cannot subscribe to course: User is already subscribed to course.
+- **E0606** Cannot unsubscribe from course: User is not subscribed to course.
 
 ## E07 Point System Errors
 -  **E0701** Points added is less than or equal to 0.
