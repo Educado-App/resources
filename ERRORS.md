@@ -46,6 +46,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0013** Content creator not found
 - **E0014** Invalid id
 
+
 ## E01 Login Errors
 
 - **E0101** Invalid email.
@@ -107,6 +108,10 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 ## E08 Model Update Errors
 -  **E0801** Attempted to update illegal field name.
 -  **E0802** Field value is identical to the current value.
+-  **E0803** Cannot update password directly.
+-  **E0804** Points must be a positive number. 
+
+
 
 ## E09 Answer Exercises Errors
 - **E0901** This exercise is already in completedExercises.
