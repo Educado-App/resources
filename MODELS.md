@@ -142,7 +142,7 @@
 | FieldName | Type | Description | Generated | Required  | Possible values  
 |---| --- | --- | :-: | :-: | ---
 | text | `String` | The answer text that the user sees | | ✔ | Any string
-| isCorrect | `Boolean` | Whether this answer is correct | | ✔ | `True` or `False`
+| correct | `Boolean` | Whether this answer is correct | | ✔ | `True` or `False`
 | feedback | `String` | The feedback of the answer | | ✔ | Any string
 |
 
