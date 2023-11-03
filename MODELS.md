@@ -45,7 +45,7 @@
 | level | `Number` | User's level. | ✔ | | Any positive 'Number'. |
 | completedCourses | `Array` | List of completed courses, sections, and exercises. | ✔ || An `Array` of objects with `courseId`, `completedSections`, and `completedExercises`. |
 | completedSections | `Array` | List of completed sections within the course. ||| An `Array` of objects with `sectionId` and `completedExercises`. |
-| completedExercises | `Array` | List of completed exercises within the section. ||| An `Array` of exercise `ObjectId` values. 
+| completedExercises | `Array` | List of completed exercises within the section. ||| An `Array` of exercise `ObjectId` values, completionDate, pointsGiven and isComplete. 
 |
 
 ### Content-creators
