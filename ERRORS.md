@@ -110,7 +110,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 -  **E0802** Field value is identical to the current value.
 -  **E0803** Cannot update password directly.
 -  **E0804** Points must be a positive number. 
-
+-  **E0805** Old and new password required.
 
 
 ## E09 Answer Exercises Errors
