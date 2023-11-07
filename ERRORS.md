@@ -111,7 +111,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 -  **E0803** Cannot update password directly.
 -  **E0804** Points must be a positive number. 
 -  **E0805** Old and new password required.
-
+-  **E0806** Old password is incorrect.
 
 ## E09 Answer Exercises Errors
 - **E0901** This exercise is already in completedExercises.
