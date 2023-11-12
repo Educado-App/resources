@@ -115,3 +115,11 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 
 ## E09 Answer Exercises Errors
 - **E0901** This exercise is already in completedExercises.
+
+## E10  Content Creator Approval Errors
+- **E1001** This Content Creator has not been approved
+- **E1002** This Content Creator has been rejected
+- **E1003** Could not approve Content Creator
+- **E1004** Could not reject Content Creator
+- **E1005** Could not get Content Creator application
+- **E1006** Could not upload application
