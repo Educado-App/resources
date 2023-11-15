@@ -6,15 +6,18 @@ Testing Documentation
   The purpose of this document is to outline the testing procedures and criteria for the Educado App. It aims to ensure comprehensive testing coverage across various aspects of the application, including functionality, usability, compatibility, performance, and security. This document is a guideline for testers and developers to conduct structured testing and verify the app's readiness for deployment on the Google Play Store.
   Scope of Testing:
   The scope of testing encompasses all the key features and functionalities of the Educado App across multiple devices and Android versions. It includes but is not limited to login functionality, navigation, data processing, user interactions, and security measures. This testing document outlines specific test cases and scenarios to validate the app's behaviour under various conditions.
+
 2. Test Objectives
   * Functional Testing
   * Usability Testing
   * Compatibility Testing
   * Performance Testing
   * Security Testing
+
 3. Test Environment
   Devices:
   * Write emulators and test devices here (including API level).
+
 4. Test Cases
   4.1 Functional Testing
     Login Page: 
