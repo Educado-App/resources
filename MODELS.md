@@ -109,8 +109,8 @@
 | id | `ObjectId` | Identifier for the object. | ✔ || A 12-byte hexadecimal `string`.
 | title | `String` | The title of the course || ✔ | A string
 | description | `String` | A description of the exercise. ||✔| A string
-| contentType | `String` | The type of the content. ||✔| `'Text'`, `'Video'`,
-| content | `String` | A video or a text containing max 1 image. |✔|| A `String`.
+| contentType | `String` | The type of the content. ||✔| `'text'`, `'video'`,
+| content | `String` | A video or a text containing max 1 image. |✔|✔| A `String`.
 |
 
 ### Exercises
