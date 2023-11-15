@@ -41,8 +41,6 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0008** Section not found.
 - **E0009** Course does not contain sections.
 - **E0010** Email could not be sent.
-- **E0011** No exercises found.
-- **E0012** Exercise not found.
 - **E0013** Content creator not found
 - **E0014** Invalid id
 
@@ -123,3 +121,11 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1004** Could not reject Content Creator
 - **E1005** Could not get Content Creator application
 - **E1006** Could not upload application
+
+## E11  Component Errors
+- **E1101** The component array has reached its maximum size
+- **E1102** The component array reached its maximum number of lectures
+- **E1103** No exercises found.
+- **E1104** Exercise not found.
+- **E1103** No lectures found.
+- **E1104** Lecture not found.
