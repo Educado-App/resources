@@ -16,38 +16,162 @@ Testing Documentation
 
 3. Test Environment
   Devices:
-  * Write emulators and test devices here (including API level).
+  * Oneplus 11 (Android 13)
+  * Oneplus Nord 2 (Android 13)
+  * Motorola 6G (Android 9)
+  * Emulators: Pixel 7, Pixel 6a, (Android 13)
 
 4. Test Cases
   4.1 Functional Testing
-    Login Page: 
-    * Test Case 1: Verify valid credentials login successfully.
-    * Test Case 2: Verify error message for invalid credentials.
 
-    Home Screen:
-    * Test Case 3: Ensure all UI elements load correctly.
-    * Test Case 4: Test the functionality of buttons (e.g., navigation, actions).
+    Login Routes:
+     Test suite x: POST /auth/login
+        * Test case x: Should find a user mail without differentiating between upper- and lowercase 
+        * Test case x: Returns error if user is not found 
+        * Test case x: Returns error if password is incorrect 
+        * Test case x: Returns token if user is found and password is correct 
+    
+    Reset Password Routes:
+      Test suite x: POST auth/reset-password-request
+        * Test case x: Returns error if email is not found 
+        * Test case x: Returns success if email is found and email is sent 
+        * Test case x: Returns error if email is not succesfully sent 
+        * Test case x: Returns error if reset password attempts > 3 
+        * Test case x: Clears reset password attempts after expiration 
+        * Test case x: Returns error if token is wrong 
+
+    Signup routes:
+      Test suite x: POST auth/signup
+        * Test case x: Saves the user in the database 
+        * Test case x: Returns error if email is missing 
+        * Test case x: Returns error if password is missing 
+        * Test case x: Returns error if email does not contain @ and domain 
+        * Test case x: Returns error if email is less than 6 characters 
+        * Test case x: Returns error if name is missing 
+        * Test case x: Returns error if name is out of bounds (1-50) 
+        * Test case x: Returns error if name contains illegal symbols
+        * Test case x: Test that the password is not stored as plain text 
+        * Test case x: Test that emails must be unique when registering
+
+    Student Routes:
+      Test suite x: GET /students/:id/subscriptions
+        * Test case x: Should get user subscriptions 
+        * Test case x: Should handle user not found error 
+        * Test case x: Should handle invalid user id
+
+      Test suite x: PATCH /students/:userId
+        * Test case x: Update points succesfully
+        * Test case x: Update level succesfully
+        * Test case x: Handles validation errors for points
+        * Test case x: Handles negative value for points
+        * Test case x: Handles 0 value for points
+
+      Test suite x: PATCH /students/:userId/completed
+        * Test case x: Adds exerciseId to completed exercises correctly 
+        * Test case x: Adds two exerciseIds to completed exercises correctly, with different parentCourses 
+        * Test case x: Adds two exerciseIds to completed exercises correctly, with same parentCourse 
+        * Test case x: First adds an exercise as failed, then completes it 
+        * Test case x: Fails to add non-existing exerciseId to completed exercises
+        * Test case x: Fails to add exerciseId to completed exercises for non-existing user
+
+    User Routes
+      Test suite x: DELETE /users/:userId
+        * Test case x: Deletes a user successfully 
+        * Test case x: Updates user email successfully 
+        * Test case x: Checks that emails must be unique when updating 
+        * Test case x: Updates user first name successfully
+        * Test case x: Updates user last name successfully 
+        * Test case x: Updates user fields successfully
+        * Test case x: Handles validation errors for email 
+        * Test case x: Handles validation errors for first name
+
+      Test suite x: PATCH /users/:userId
+        * Test case x: Should change user credentials 
+        * Test case x: Return error if trying to edit password
+        * Test case x: Return error if there is an attempt to update an illegal field name 
+        * Test case x: Return succesful updated object with new dateUpdated value 
+        * Test case x: Return error if email you try to PATCH is identical 
+        * Test case x: Return error if firstName you try to PATCH is identical 
+
+      Test suite x: PATCH /api/users/:userId/password
+        * Test case x: Should change password 
+        * Test case x: Should return error if old password is wrong 
+        * Test case x: Should return error if new password is invalid 
+        * Test case x: Should return error if new password is missing
+        * Test case x: Should return error if id is invalid 
+        * Test case x: Should return error if no user is found with the id
+
+    Course Routes:
+     Test suite x: GET /courses/:id
+        * Test case x: Should get a specific course
+        * Test case x: Should handle course not found error
+        * Test case x: Should handle invalid course id
+
+      Test suite x: GET /courses/:id/sections
+        * Test case x: Should get all sections from a course
+        * Test case x: Should handle course not found error
+        * Test case x: Should handle invalid course id 
+
+      Test suite x: GET /courses/:courseId/sections/:sectionId
+        * Test case x: Should get a specific section
+        * Test case x: Should handle course not found error
+        * Test case x: Should handle invalid course id
+        * Test case x: Should handle section not found error
+        * Test case x: Should handle invalid section id
+
+      Test suite x: GET /courses/:id/sections, error handling
+        * Test case x: Should handle course does not contain sections
+        * Test case x: Should handle sections not found
+
+      Test suite x: POST /courses/:id/subscribe
+        * Test case x: Should subscribe a user to a course 
+        * Test case x: Should handle user not found error when subscribing
+        * Test case x: Should handle invalid user id when subscribing 
+        * Test case x: Should handle course not found error when subscribing 
+        * Test case x: Should handle invalid course id when subscribing 
+        * Test case x: Increments number of subscribers for a course, when subscribing
+        * Test case x: Should handle user already subscribed error 
+
+      Test suite x: POST /courses/:id/unsubscribe
+        * Test case x: Error when unsubscribing to course with no subscriptions 
+        * Test case x: Should handle user not found error when unsubscribing 
+        * Test case x: Should handle invalid user id when unsubscribing
+        * Test case x: Should handle course not found error when unsubscribing
+        * Test case x: Should handle invalid course id when unsubscribing 
+        * Test case x: Decrements number of subscribers for a course, when unsubscribing
+
+    Lecture Routes:
+      Test suite x: GET /lectures/:lectureId
+        * Test case x: Should return a lecture
+
+    Utility Routes:
+      Test suite x:   GET /utility/online
+        * Test case x: Test if online
 
   4.2 Usability Testing
-    * Test Case 5: Evaluate app navigation intuitiveness.
-    * Test Case 6: Check font size and readability across devices.
+    Usability tests have been conducted by the intended user. 
+    * Test Case x: Check if all text is readable. 
+    * Test Case x: Check if all text is translated correctly to Portuguese. 
+    * Test Case x: Check if design is intuitive.
 
   4.3 Compatibility Testing
-    * Test Case 7: Test app on various screen sizes and resolutions.
-    * Test Case 8: Ensure compatibility with different Android versions.
+    * Test Case x: Test app on various screen sizes and resolutions.
+    * Test Case x: Ensure compatibility with different Android versions.
 
   4.4 Performance Testing
-    * Test Case 9: Assess app response time under varying network conditions.
-    * Test Case 10: Check memory consumption during prolonged use.
+    * Test Case x: Assess app response time under varying network conditions.
+    * Test Case x: Check memory consumption during prolonged use.
 
   4.5 Security Testing
-    * Test Case 11: Validate data encryption during transmission.
-    * Test Case 12: Test against common security vulnerabilities (SQL injection, XSS).
+    * Test Case x: Validate data encryption during transmission.
+    * Test Case x: Test against common security vulnerabilities (SQL injection, XSS).
+
 5. Test Results
   Summary of test outcomes for each test case.
 
 6. Issues and Bug Tracking
-  Documented issues encountered during testing with severity and steps to reproduce.
+  No issues or bugs identifies by now. 
 
 7. Conclusion
-  Overall assessment of the app's readiness for deployment.
+  The conclusion is that the app is ready for deployment.
+  However, implementing more test and security measures will be priority for furture release. 
