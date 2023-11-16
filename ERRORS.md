@@ -43,6 +43,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0010** Email could not be sent.
 - **E0013** Content creator not found
 - **E0014** Invalid id
+- **E0015** Invalid time interval. Use "day", "week", "month" or "all".
 
 
 ## E01 Login Errors
