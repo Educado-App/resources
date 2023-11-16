@@ -25,14 +25,14 @@ Testing Documentation
   4.1 Functional Testing
 
     Login Routes:
-     Test suite x: POST /auth/login
+      POST /auth/login
         * Test case x: Should find a user mail without differentiating between upper- and lowercase 
         * Test case x: Returns error if user is not found 
         * Test case x: Returns error if password is incorrect 
         * Test case x: Returns token if user is found and password is correct 
     
     Reset Password Routes:
-      Test suite x: POST auth/reset-password-request
+      POST auth/reset-password-request
         * Test case x: Returns error if email is not found 
         * Test case x: Returns success if email is found and email is sent 
         * Test case x: Returns error if email is not succesfully sent 
@@ -41,7 +41,7 @@ Testing Documentation
         * Test case x: Returns error if token is wrong 
 
     Signup routes:
-      Test suite x: POST auth/signup
+      POST auth/signup
         * Test case x: Saves the user in the database 
         * Test case x: Returns error if email is missing 
         * Test case x: Returns error if password is missing 
@@ -54,19 +54,19 @@ Testing Documentation
         * Test case x: Test that emails must be unique when registering
 
     Student Routes:
-      Test suite x: GET /students/:id/subscriptions
+      GET /students/:id/subscriptions
         * Test case x: Should get user subscriptions 
         * Test case x: Should handle user not found error 
         * Test case x: Should handle invalid user id
 
-      Test suite x: PATCH /students/:userId
+      PATCH /students/:userId
         * Test case x: Update points succesfully
         * Test case x: Update level succesfully
         * Test case x: Handles validation errors for points
         * Test case x: Handles negative value for points
         * Test case x: Handles 0 value for points
 
-      Test suite x: PATCH /students/:userId/completed
+      PATCH /students/:userId/completed
         * Test case x: Adds exerciseId to completed exercises correctly 
         * Test case x: Adds two exerciseIds to completed exercises correctly, with different parentCourses 
         * Test case x: Adds two exerciseIds to completed exercises correctly, with same parentCourse 
@@ -75,7 +75,7 @@ Testing Documentation
         * Test case x: Fails to add exerciseId to completed exercises for non-existing user
 
     User Routes
-      Test suite x: DELETE /users/:userId
+      DELETE /users/:userId
         * Test case x: Deletes a user successfully 
         * Test case x: Updates user email successfully 
         * Test case x: Checks that emails must be unique when updating 
@@ -85,7 +85,7 @@ Testing Documentation
         * Test case x: Handles validation errors for email 
         * Test case x: Handles validation errors for first name
 
-      Test suite x: PATCH /users/:userId
+      PATCH /users/:userId
         * Test case x: Should change user credentials 
         * Test case x: Return error if trying to edit password
         * Test case x: Return error if there is an attempt to update an illegal field name 
@@ -93,7 +93,7 @@ Testing Documentation
         * Test case x: Return error if email you try to PATCH is identical 
         * Test case x: Return error if firstName you try to PATCH is identical 
 
-      Test suite x: PATCH /api/users/:userId/password
+      PATCH /api/users/:userId/password
         * Test case x: Should change password 
         * Test case x: Should return error if old password is wrong 
         * Test case x: Should return error if new password is invalid 
@@ -102,28 +102,28 @@ Testing Documentation
         * Test case x: Should return error if no user is found with the id
 
     Course Routes:
-     Test suite x: GET /courses/:id
+     GET /courses/:id
         * Test case x: Should get a specific course
         * Test case x: Should handle course not found error
         * Test case x: Should handle invalid course id
 
-      Test suite x: GET /courses/:id/sections
+      GET /courses/:id/sections
         * Test case x: Should get all sections from a course
         * Test case x: Should handle course not found error
         * Test case x: Should handle invalid course id 
 
-      Test suite x: GET /courses/:courseId/sections/:sectionId
+      GET /courses/:courseId/sections/:sectionId
         * Test case x: Should get a specific section
         * Test case x: Should handle course not found error
         * Test case x: Should handle invalid course id
         * Test case x: Should handle section not found error
         * Test case x: Should handle invalid section id
 
-      Test suite x: GET /courses/:id/sections, error handling
+      GET /courses/:id/sections, error handling
         * Test case x: Should handle course does not contain sections
         * Test case x: Should handle sections not found
 
-      Test suite x: POST /courses/:id/subscribe
+      POST /courses/:id/subscribe
         * Test case x: Should subscribe a user to a course 
         * Test case x: Should handle user not found error when subscribing
         * Test case x: Should handle invalid user id when subscribing 
@@ -132,7 +132,7 @@ Testing Documentation
         * Test case x: Increments number of subscribers for a course, when subscribing
         * Test case x: Should handle user already subscribed error 
 
-      Test suite x: POST /courses/:id/unsubscribe
+      POST /courses/:id/unsubscribe
         * Test case x: Error when unsubscribing to course with no subscriptions 
         * Test case x: Should handle user not found error when unsubscribing 
         * Test case x: Should handle invalid user id when unsubscribing
@@ -141,11 +141,11 @@ Testing Documentation
         * Test case x: Decrements number of subscribers for a course, when unsubscribing
 
     Lecture Routes:
-      Test suite x: GET /lectures/:lectureId
+      GET /lectures/:lectureId
         * Test case x: Should return a lecture
 
     Utility Routes:
-      Test suite x:   GET /utility/online
+      GET /utility/online
         * Test case x: Test if online
 
   4.2 Usability Testing
@@ -167,7 +167,20 @@ Testing Documentation
     * Test Case x: Test against common security vulnerabilities (SQL injection, XSS).
 
 5. Test Results
-  Summary of test outcomes for each test case.
+  Summary of test outcomes for each test suite:
+      Test Suite                                | Passed Tests
+      ------------------------------------------|--------------
+      Login Routes                              | ../..
+      Reset Password Routes                     | ../..
+      Signup Routes                             | ../..
+      Student Routes                            | ../..
+      Users Routes                              | ../..
+      Course Routes                             | ../..
+      Lecture Routes                            | ../..
+      Utility Routes                            | ../..
+      ------------------------------------------|--------------
+      Total Tests                               | ../..
+
 
 6. Issues and Bug Tracking
   No issues or bugs identifies by now. 
