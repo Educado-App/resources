@@ -12,6 +12,7 @@ Guidelines includes focus on structuring your tests using  to help you write eff
 | ----------- | ---------------------------------------------------------------------------- |
 | 2023-Oct-12 | 1st release of testing guidelines                                            |
 | 2023-Oct-12 | Changed formulation of test cases                                            |
+| 2023-Nov-17 | Changed convention of Describe when endpoint testing                         |
 
 </details>
 
@@ -54,6 +55,18 @@ you should use the same name for your test file, as the actual file you are tryi
 
 > **⚠️ Don't: ⚠️**\
 > use <b>.spec.js</b> as postfix.
+
+### When testing endpoints:
+
+> **✔️ Do: ✔️**\
+> Use the HTTP method and endpoint url as **describe()** parameter.
+>
+> for example: **describe('GET /students/:id/subscriptions')**
+
+> **⚠️ Don't: ⚠️**\
+> Just name it whatever you feel.
+>
+> _The describe() convention with url endpoints makes it easier to write TEST_DOCUMENTATION upon releases._
 
 ## How to structure tests?
 
