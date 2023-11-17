@@ -145,6 +145,25 @@
 | feedback | `String` | The feedback of the answer | | ✔ | Any string
 |
 
+### Application
+| FieldName | Type | Description | Generated | Required  | Possible values  
+|---| --- | --- | :-: | :-: | ---
+| id | `ObjectID` | Identifier for the object | | ✔ | A 12-byte hexadecimal `string`.
+| motivation | `String` | Motivation for why they want to join Educado | | |Any String
+| academicLevel | `String` | The level of their education | |  | `Básico`, `Médio`, or `Superior`
+| academicStatus | `String` | The status of their most resent education | | | `Em andemento`, `Concluída`, or `Não finalizado`
+| major | `String` | What they majored in during their education | |  | Any string
+| institution | `String` | Where they recieved their education | |  | Any string
+| educationStartDate | `String` | When their education began| |  | Any string
+| EducationEndDate | `String` | When their education ended | |  | Any string
+| company | `String` | What company they work for | |  | Any string
+| position | `String` | What position they have in the company | |  | Any string
+| workStartDate | `String` | When they started working for the company | |  | Any string
+| workEndDate | `String` | When their work for the company will end | |  | Any string
+| workActivities | `String` | What they do at the company | |  | Any string
+| baseUser | `ObjectId` | A reference to the basic user information | | | A 12-byte hexadecimal `string`.
+
+|
 ### Notes
 
 Feel free to update and errors in all the models. Please update the change history on any major update (such as a new model or a complete rework of am existing model).
