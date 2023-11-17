@@ -128,5 +128,5 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1102** The component array reached its maximum number of lectures
 - **E1103** No exercises found.
 - **E1104** Exercise not found.
-- **E1103** No lectures found.
-- **E1104** Lecture not found.
+- **E1105** No lectures found.
+- **E1106** Lecture not found.
