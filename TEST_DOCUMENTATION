@@ -164,7 +164,6 @@ Testing Documentation
 
   4.5 Security Testing
     * Test Case x: Validate data encryption during transmission.
-    * Test Case x: Test against common security vulnerabilities (SQL injection, XSS).
 
 5. Test Results
   Summary of test outcomes for each test suite:
@@ -172,16 +171,21 @@ Testing Documentation
 
       Test Suite                                | Passed Tests
       ------------------------------------------|--------------
-      Login Routes                              | ../..
-      Reset Password Routes                     | ../..
-      Signup Routes                             | ../..
-      Student Routes                            | ../..
-      Users Routes                              | ../..
-      Course Routes                             | ../..
-      Lecture Routes                            | ../..
-      Utility Routes                            | ../..
+      Functional testing:                       |
+          Login Routes                          | 4/4
+          Reset Password Routes                 | 6/6
+          Signup Routes                         | 10/10
+          Student Routes                        | 14/14
+          Users Routes                          | 20/20
+          Course Routes                         | 26/26
+          Lecture Routes                        | 1/1
+          Utility Routes                        | 1/1
+      Usability testing:                        | 3/3
+      Compability testing:                      | 2/2
+      Performance testing:                      | 2/2
+      Security testing:                         | 1/1
       ------------------------------------------|--------------
-      Total Tests                               | ../..
+      Total Tests                               | ../..  
 
 
 6. Issues and Bug Tracking
