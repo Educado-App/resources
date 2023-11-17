@@ -155,8 +155,14 @@ Testing Documentation
     * Test Case x: Check if design is intuitive.
 
   4.3 Compatibility Testing
-    * Test Case x: Test app on various screen sizes and resolutions.
-    * Test Case x: Ensure compatibility with different Android versions.
+    Test app on various screen sizes.
+      * Test Case x: Test on screen size x
+      * Test Case x: Test on screen size x
+      * Test Case x: Test on screen size x
+    Ensure compatibility with different Android versions.
+      * Test Case x: Test on Android version x
+      * Test Case x: Test on Android version x
+      * Test Case x: Test on Android version x
 
   4.4 Performance Testing
     * Test Case x: Assess app response time under varying network conditions.
@@ -181,7 +187,7 @@ Testing Documentation
           Lecture Routes                        | 1/1
           Utility Routes                        | 1/1
       Usability testing:                        | 3/3
-      Compability testing:                      | 2/2
+      Compability testing:                      | 6/6
       Performance testing:                      | 2/2
       Security testing:                         | 1/1
       ------------------------------------------|--------------
