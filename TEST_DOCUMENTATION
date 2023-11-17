@@ -26,150 +26,156 @@ Testing Documentation
 
     Login Routes:
       POST /auth/login
-        * Test case x: Should find a user mail without differentiating between upper- and lowercase 
-        * Test case x: Returns error if user is not found 
-        * Test case x: Returns error if password is incorrect 
-        * Test case x: Returns token if user is found and password is correct 
+        * Test case 1: Should find a user mail without differentiating between upper- and lowercase 
+        * Test case 2: Returns error if user is not found 
+        * Test case 3: Returns error if password is incorrect 
+        * Test case 4: Returns token if user is found and password is correct 
     
     Reset Password Routes:
       POST auth/reset-password-request
-        * Test case x: Returns error if email is not found 
-        * Test case x: Returns success if email is found and email is sent 
-        * Test case x: Returns error if email is not succesfully sent 
-        * Test case x: Returns error if reset password attempts > 3 
-        * Test case x: Clears reset password attempts after expiration 
-        * Test case x: Returns error if token is wrong 
+        * Test case 5: Returns error if email is not found 
+        * Test case 6: Returns success if email is found and email is sent 
+        * Test case 7: Returns error if email is not successfully sent 
+        * Test case 8: Returns error if reset password attempts > 3 
+        * Test case 9: Clears reset password attempts after expiration 
+        * Test case 10: Returns error if token is wrong 
 
     Signup routes:
       POST auth/signup
-        * Test case x: Saves the user in the database 
-        * Test case x: Returns error if email is missing 
-        * Test case x: Returns error if password is missing 
-        * Test case x: Returns error if email does not contain @ and domain 
-        * Test case x: Returns error if email is less than 6 characters 
-        * Test case x: Returns error if name is missing 
-        * Test case x: Returns error if name is out of bounds (1-50) 
-        * Test case x: Returns error if name contains illegal symbols
-        * Test case x: Test that the password is not stored as plain text 
-        * Test case x: Test that emails must be unique when registering
+        * Test case 11: Saves the user in the database 
+        * Test case 12: Returns error if email is missing 
+        * Test case 13: Returns error if password is missing 
+        * Test case 14: Returns error if email does not contain @ and domain 
+        * Test case 15: Returns error if email is less than 6 characters 
+        * Test case 16: Returns error if name is missing 
+        * Test case 17: Returns error if name is out of bounds (1-50) 
+        * Test case 18: Returns error if name contains illegal symbols
+        * Test case 19: Test that the password is not stored as plain text 
+        * Test case 20: Test that emails must be unique when registering
 
     Student Routes:
       GET /students/:id/subscriptions
-        * Test case x: Should get user subscriptions 
-        * Test case x: Should handle user not found error 
-        * Test case x: Should handle invalid user id
+        * Test case 21: Should get user subscriptions 
+        * Test case 22: Should handle user not found error 
+        * Test case 23: Should handle invalid user id
 
       PATCH /students/:userId
-        * Test case x: Update points succesfully
-        * Test case x: Update level succesfully
-        * Test case x: Handles validation errors for points
-        * Test case x: Handles negative value for points
-        * Test case x: Handles 0 value for points
+        * Test case 24: Update points successfully
+        * Test case 25: Update level successfully
+        * Test case 26: Handles validation errors for points
+        * Test case 27: Handles negative value for points
+        * Test case 28: Handles 0 value for points
 
       PATCH /students/:userId/completed
-        * Test case x: Adds exerciseId to completed exercises correctly 
-        * Test case x: Adds two exerciseIds to completed exercises correctly, with different parentCourses 
-        * Test case x: Adds two exerciseIds to completed exercises correctly, with same parentCourse 
-        * Test case x: First adds an exercise as failed, then completes it 
-        * Test case x: Fails to add non-existing exerciseId to completed exercises
-        * Test case x: Fails to add exerciseId to completed exercises for non-existing user
+        * Test case 29: Adds exerciseId to completed exercises correctly 
+        * Test case 30: Adds two exerciseIds to completed exercises correctly, with different parentCourses 
+        * Test case 31: Adds two exerciseIds to completed exercises correctly, with the same parentCourse 
+        * Test case 32: First adds an exercise as failed, then completes it 
+        * Test case 33: Fails to add a non-existing exerciseId to completed exercises
+        * Test case 34: Fails to add an exerciseId to completed exercises for a non-existing user
 
     User Routes
       DELETE /users/:userId
-        * Test case x: Deletes a user successfully 
-        * Test case x: Updates user email successfully 
-        * Test case x: Checks that emails must be unique when updating 
-        * Test case x: Updates user first name successfully
-        * Test case x: Updates user last name successfully 
-        * Test case x: Updates user fields successfully
-        * Test case x: Handles validation errors for email 
-        * Test case x: Handles validation errors for first name
+        * Test case 35: Deletes a user successfully 
+        * Test case 36: Updates user email successfully 
+        * Test case 37: Checks that emails must be unique when updating 
+        * Test case 38: Updates user first name successfully
+        * Test case 39: Updates user last name successfully 
+        * Test case 40: Updates user fields successfully
+        * Test case 41: Handles validation errors for email 
+        * Test case 42: Handles validation errors for the first name
 
       PATCH /users/:userId
-        * Test case x: Should change user credentials 
-        * Test case x: Return error if trying to edit password
-        * Test case x: Return error if there is an attempt to update an illegal field name 
-        * Test case x: Return succesful updated object with new dateUpdated value 
-        * Test case x: Return error if email you try to PATCH is identical 
-        * Test case x: Return error if firstName you try to PATCH is identical 
+        * Test case 43: Should change user credentials 
+        * Test case 44: Return error if trying to edit the password
+        * Test case 45: Return error if there is an attempt to update an illegal field name 
+        * Test case 46: Return successful updated object with a new dateUpdated value 
+        * Test case 47: Return error if the email you try to PATCH is identical 
+        * Test case 48: Return error if the firstName you try to PATCH is identical 
 
       PATCH /api/users/:userId/password
-        * Test case x: Should change password 
-        * Test case x: Should return error if old password is wrong 
-        * Test case x: Should return error if new password is invalid 
-        * Test case x: Should return error if new password is missing
-        * Test case x: Should return error if id is invalid 
-        * Test case x: Should return error if no user is found with the id
+        * Test case 49: Should change the password 
+        * Test case 50: Should return an error if the old password is wrong 
+        * Test case 51: Should return an error if the new password is invalid 
+        * Test case 52: Should return an error if the new password is missing
+        * Test case 53: Should return an error if the id is invalid 
+        * Test case 54: Should return an error if no user is found with the id
 
-    Course Routes:
-     GET /courses/:id
-        * Test case x: Should get a specific course
-        * Test case x: Should handle course not found error
-        * Test case x: Should handle invalid course id
+    Course Routes
+      GET /courses/:id
+        * Test case 55: Should get a specific course
+        * Test case 56: Should handle the course not found error
+        * Test case 57: Should handle an invalid course id
 
       GET /courses/:id/sections
-        * Test case x: Should get all sections from a course
-        * Test case x: Should handle course not found error
+        * Test case 58: Should get all sections from a course
+        * Test case 59: Should handle the course not found error
         * Test case x: Should handle invalid course id 
 
       GET /courses/:courseId/sections/:sectionId
-        * Test case x: Should get a specific section
-        * Test case x: Should handle course not found error
-        * Test case x: Should handle invalid course id
-        * Test case x: Should handle section not found error
-        * Test case x: Should handle invalid section id
+        * Test case 61: Should get a specific section
+        * Test case 62: Should handle course not found error
+        * Test case 63: Should handle invalid course id
+        * Test case 64: Should handle section not found error
+        * Test case 65: Should handle invalid section id
 
       GET /courses/:id/sections, error handling
-        * Test case x: Should handle course does not contain sections
-        * Test case x: Should handle sections not found
+        * Test case 66: Should handle course does not contain sections
+        * Test case 67: Should handle sections not found
 
       POST /courses/:id/subscribe
-        * Test case x: Should subscribe a user to a course 
-        * Test case x: Should handle user not found error when subscribing
-        * Test case x: Should handle invalid user id when subscribing 
-        * Test case x: Should handle course not found error when subscribing 
-        * Test case x: Should handle invalid course id when subscribing 
-        * Test case x: Increments number of subscribers for a course, when subscribing
-        * Test case x: Should handle user already subscribed error 
+        * Test case 68: Should subscribe a user to a course 
+        * Test case 69: Should handle user not found error when subscribing
+        * Test case 70: Should handle invalid user id when subscribing 
+        * Test case 71: Should handle course not found error when subscribing 
+        * Test case 72: Should handle invalid course id when subscribing 
+        * Test case 73: Increments number of subscribers for a course, when subscribing
+        * Test case 74: Should handle user already subscribed error 
 
       POST /courses/:id/unsubscribe
-        * Test case x: Error when unsubscribing to course with no subscriptions 
-        * Test case x: Should handle user not found error when unsubscribing 
-        * Test case x: Should handle invalid user id when unsubscribing
-        * Test case x: Should handle course not found error when unsubscribing
-        * Test case x: Should handle invalid course id when unsubscribing 
-        * Test case x: Decrements number of subscribers for a course, when unsubscribing
+        * Test case 75: Error when unsubscribing to course with no subscriptions 
+        * Test case 76: Should handle user not found error when unsubscribing 
+        * Test case 77: Should handle invalid user id when unsubscribing
+        * Test case 78: Should handle course not found error when unsubscribing
+        * Test case 79: Should handle invalid course id when unsubscribing 
+        * Test case 80: Decrements number of subscribers for a course, when unsubscribing
 
     Lecture Routes:
       GET /lectures/:lectureId
-        * Test case x: Should return a lecture
+        * Test case 81: Should return a lecture
 
     Utility Routes:
       GET /utility/online
-        * Test case x: Test if online
+        * Test case 82: Test if online
 
   4.2 Usability Testing
     Usability tests have been conducted by the intended user. 
-    * Test Case x: Check if all text is readable. 
-    * Test Case x: Check if all text is translated correctly to Portuguese. 
-    * Test Case x: Check if design is intuitive.
+    * Test Case 83: Check if all text is readable for the user
+    * Test Case 84: Check if the user understands all the words/text  
+    * Test Case 85: Check if the design is intuitive for the user
 
   4.3 Compatibility Testing
     Test app on various screen sizes.
-      * Test Case x: Test on screen size x
-      * Test Case x: Test on screen size x
-      * Test Case x: Test on screen size x
+      * Test Case 86: Test on pixel 6
+      * Test Case 87: Test on pixel 7
+      * Test Case 88: Test on Motorola 6G
+      * Test Case 89: Test on Oneplus 11
     Ensure compatibility with different Android versions.
-      * Test Case x: Test on Android version x
-      * Test Case x: Test on Android version x
-      * Test Case x: Test on Android version x
+      * Test Case 90: Test on Android version 9
+      * Test Case 91: Test on Android version 12
+      * Test Case 92: Test on Android version 13
 
   4.4 Performance Testing
-    * Test Case x: Assess app response time under varying network conditions.
-    * Test Case x: Check memory consumption during prolonged use.
+    Assess app response time under varying network conditions.
+      * Test Case 93: Test that it works with full Wi-Fi 
+      * Test Case 94: Test that it works with two out of three lines on Wi-Fi
+      * Test Case 95: Test that it works with only one out of three lines on Wi-Fi
+      * Test Case 96: Test that it works on 4G
+      * Test Case 97: Test that it works on 3G
 
   4.5 Security Testing
-    * Test Case x: Validate data encryption during transmission.
+    Encryption of password
+    * Test Case 98: Test that it encrypts the password correctly
 
 5. Test Results
   Summary of test outcomes for each test suite:
@@ -187,11 +193,11 @@ Testing Documentation
           Lecture Routes                        | 1/1
           Utility Routes                        | 1/1
       Usability testing:                        | 3/3
-      Compability testing:                      | 6/6
-      Performance testing:                      | 2/2
+      Compability testing:                      | 7/7
+      Performance testing:                      | 5/5
       Security testing:                         | 1/1
       ------------------------------------------|--------------
-      Total Tests                               | ../..  
+      Total Tests                               | 98/98
 
 
 6. Issues and Bug Tracking
