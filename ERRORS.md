@@ -133,3 +133,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1104** Exercise not found.
 - **E1105** No lectures found.
 - **E1106** Lecture not found.
+
+## E12  Institutinal Onboarding Errors
+- **E1201** This Institution already exists
+- **E1202** This Email Domain already exists as part of another Institution
+- **E1203** Could not upload Institution
