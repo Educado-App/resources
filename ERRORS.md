@@ -115,7 +115,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 
 ## E09 Answer Exercises Errors
 - **E0901** This exercise is already in completedExercises.
-- **E0902** This section could not be found in the completedCourse array.
+- **E0902** This section could not be found in the completedSections array.
+- **E0903** This course could not be found in the completedCourses array.
 
 ## E10  Content Creator Approval Errors
 - **E1001** This Content Creator has not been approved
