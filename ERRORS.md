@@ -138,4 +138,4 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1201** Could not upload Institution
 - **E1202** This Institution already exists 
 - **E1203** This Email Domain already exists as part of another Institution
-- **E1204** This Secondary Email Domain already ecsist as part of another Institution
+- **E1204** This Secondary Email Domain already exists as part of another Institution
