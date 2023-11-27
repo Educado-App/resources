@@ -154,7 +154,6 @@
 | workEndDate | `String` | When their work for the company will end | | ✔ | Any string
 | workActivities | `String` | What they do at the company | |✔  | Any string
 | baseUser | `ObjectId` | A reference to the basic user information | | ✔| A 12-byte hexadecimal `string`
-|
 
 ### Institution
 | FieldName | Type | Description | Generated | Required  | Possible values  
@@ -165,13 +164,31 @@
 | institutionName | `String` | The level of their education | | ✔ | Any String
 
 
-### Certificates
+### Student certificates
 
-**Description:** The certificate model represents the data related to certificates given to students upon completion of courses.
+**Description:** The student certificate model represents the data related to certificates given to students upon completion of courses.
 
 | FieldName | Type | Description | Generated | Required  | Possible values  
 |---| --- | --- | :-: | :-: | ---
 | id | `ObjectId` | Identifier for the object. | ✔ || A 12-byte hexadecimal `string`.
+| courseId | `ObjectId` | Reference to the course which has been completed. | | ✔ | An `ObjectId` referencing a course
+| studentId | `ObjectId` | Reference to the student to whom the certificate belongs. | | ✔ | An `ObjectId` referencing a user
+| studentFirstName | `String` | The student's first name | ✔ | ✔ | 
+| studentLastName | `String` | The student's last name | ✔ | ✔ | 
+| courseCreator | `String` | The name of the course creator | ✔ | ✔ | 
+| estimatedCourseDuration | `Number` | The estimated amount of hours it takes to complete the course | ✔ | ✔ |
+| dateOfCompletion | `Date` | The date and time for the completion of the course | ✔ | ✔ | Any `Date` in the past
+| courseCategory | `String` | The category of the course | ✔ | ✔ | 
+
+### Content creator certificates
+
+**Description:** The content creator certificate model represents the data related to certificates given to content creators upon creation of courses.
+
+| FieldName | Type | Description | Generated | Required  | Possible values  
+|---| --- | --- | :-: | :-: | ---
+| id | `ObjectId` | Identifier for the object. | ✔ || A 12-byte hexadecimal `string`.
+| courseId | `ObjectId` | Reference to the course which has been created. | | ✔ | An `ObjectId` referencing a course
+| creatorId | `ObjectId` | Reference to the content creator to whom the certificate belongs. | | ✔ | An `ObjectId` referencing a user
 
 ### Notes
 
