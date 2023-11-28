@@ -24,5 +24,5 @@ The certificate issuance system is a feature that distributes certificates to us
   - :heavy_check_mark: The content creator can preview/download a pdf of their certificate, which generates with the dynamically updated information.
 - Student certificates:
   - :heavy_check_mark: Certificates are created and stored in the database upon completion of a course.
-  - :heavy_check_mark: The student is able to to look through which certificates they have received, which shows relevant information (course name, creator, estimated course duration, number of subscribers, average rating).
+  - :heavy_check_mark: The student is able to to look through which certificates they have received, which shows relevant information.
   - :x: The student is able to preview/download a pdf of their certificate, which generates with the dynamically updated information. 
