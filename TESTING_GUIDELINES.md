@@ -26,7 +26,6 @@ Guidelines includes focus on structuring your tests to help you write efficient,
 - [Jest unit testing](#Jest-unit-testing)
   - [Where to put unit tests?](#Where-to-put-unit-tests?)
   - [What should i name my unit test files?](#What-should-i-name-my-unit-test-files?)
-  - [When testing endpoints](#When-testing-endpoints)
   - [How to structure unit tests?](#How-to-structure-unit-tests?)
   - [Running unit tests](#Running-unit-tests)
 - [Cypress E2E testing](#Cypress-E2E-testing)
