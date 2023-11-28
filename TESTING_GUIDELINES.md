@@ -19,6 +19,23 @@ Guidelines includes focus on structuring your tests to help you write efficient,
 > use Cypress for E2E testing in _mobile_.
 > _(As of 2023-Nov-28 it does not work well with React Native)_
 
+
+## Table of contentss
+- [History](#History)
+- [Prerequisites](#Prerequisites)
+- [Jest unit testing](#Jest-unit-testing)
+  - [Where to put unit tests?](#Where-to-put-unit-tests?)
+  - [What should i name my unit test files?](#What-should-i-name-my-unit-test-files?)
+  - [When testing endpoints](#When-testing-endpoints:)
+  - [How to structure unit tests?](#How-to-structure-unit-tests?)
+  - [Running unit tests](#Running-unit-tests)
+- [Cypress E2E testing](#Cypress-E2E-testing)
+  - [Where to put E2E tests?](#Where-to-put-E2E-tests)
+  - [What should i name my unit test files?](#What-should-i-name-my-unit-test-files?)
+  - [How to structure E2E tests?](#How-to-structure-E2E-tests?)
+  - [Running E2E tests](#Running-E2E-tests)
+
+
 ## History
 
 <details>
