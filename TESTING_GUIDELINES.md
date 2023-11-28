@@ -422,7 +422,7 @@ describe('Dogs', () => {
 
 <i>More info can be found here: [Cypress docs](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks)</i>
 
-## Running unit tests
+## Running E2E tests
 
 When running Cypress tests, it is important to have a server running. This can be done with following command:
 
