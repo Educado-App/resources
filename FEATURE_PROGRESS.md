@@ -18,6 +18,7 @@ The certificate issuance system is a feature that distributes certificates to us
 
 - [Certificate issuance microservice](https://github.com/Educado-App/educado-certificate-service) has been created to handle certificates.
   - :heavy_check_mark: Through this microservice, one can create, retrieve, download and retrieve certificates.
+  - :x: Security is considered in the microservice
 - Content creator certificates: 
   - :heavy_check_mark: Certificates are created and stored in the database upon publication of a course.
   - :heavy_check_mark: The content creator is able to look through their certificates, which shows relevant information (course name, creator, estimated course duration, number of subscribers, average rating). 
@@ -25,4 +26,5 @@ The certificate issuance system is a feature that distributes certificates to us
 - Student certificates:
   - :heavy_check_mark: Certificates are created and stored in the database upon completion of a course.
   - :heavy_check_mark: The student is able to to look through which certificates they have received, which shows relevant information.
-  - :x: The student is able to preview/download a pdf of their certificate, which generates with the dynamically updated information. 
+  - :x: The student is able to preview/download a pdf of their certificate, which generates with the dynamically updated information.
+  - :x: A certificate is generated as a student has finished a course.
