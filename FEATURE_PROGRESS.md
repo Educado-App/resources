@@ -5,6 +5,7 @@ This file exclusively shows features progress - see [FEATURES.md](FEATURES.md) f
 ## Table of Contents
 
 - [Certificate Issuance System](#certificate-issuance-system)
+- [Social Gamified Learning Experience](#social-gamified-learning-experience)
 
 ---
 
@@ -28,3 +29,7 @@ The certificate issuance system is a feature that distributes certificates to us
   - :heavy_check_mark: The student is able to to look through which certificates they have received, which shows relevant information.
   - :x: The student is able to preview/download a pdf of their certificate, which generates with the dynamically updated information.
   - :x: A certificate is generated as a student has finished a course.
+
+### Social-Gamified Learning Experience
+#### Description:
+#### Progress:
