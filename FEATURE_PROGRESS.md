@@ -9,7 +9,7 @@ This file exclusively shows features progress - see [FEATURES.md](FEATURES.md) f
 
 ---
 
-### Certificate Issuance System
+## Certificate Issuance System
 
 #### Description:
 
@@ -30,7 +30,9 @@ The certificate issuance system is a feature that distributes certificates to us
   - :x: The student is able to preview/download a pdf of their certificate, which generates with the dynamically updated information.
   - :x: A certificate is generated as a student has finished a course.
 
-### Social-Gamified Learning Experience
+---
+
+## Social-Gamified Learning Experience
 #### Description:
 The social-gamified learning experience is a feature that encourages the students to use the app more and socialise through the application. As of now, the students receive points when answering exercises for a section which is a part of a course. The points are used to level up and compete against other students through a leaderboard, which is still to be implemented.
 #### Progress:
@@ -40,3 +42,5 @@ The social-gamified learning experience is a feature that encourages the student
 - Extra points logic
   - :heavy_check_mark: Route created in back-end for giving extra points when in a section (answering multiple exercises correctly in a row).
   - :x: Logic implemented in front-end
+
+---
