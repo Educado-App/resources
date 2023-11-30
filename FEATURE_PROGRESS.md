@@ -37,9 +37,6 @@ The social-gamified learning experience is a feature that encourages the student
 - Leaderboard: 
   - :heavy_check_mark: Route created in back-end
   - :x: Leaderboard design implemented in frontend
-- View scored points for the whole course when in a lecture or exercise
-- Fix flow for components
-- Completing course animation
 - Extra points logic
   - :heavy_check_mark: Route created in back-end for giving extra points when in a section (answering multiple exercises correctly in a row).
   - :x: Logic implemented in front-end
