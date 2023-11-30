@@ -32,12 +32,14 @@ The certificate issuance system is a feature that distributes certificates to us
 
 ### Social-Gamified Learning Experience
 #### Description:
-The social-gamified learning experience is a feature that encourages the students to use the app more and socialise through the application. As of now, the students receive points when answering exercises for a section which is a part of a course. The points are used to level up, and compete against other students through a leaderboard, which is still to be implemented.
+The social-gamified learning experience is a feature that encourages the students to use the app more and socialise through the application. As of now, the students receive points when answering exercises for a section which is a part of a course. The points are used to level up and compete against other students through a leaderboard, which is still to be implemented.
 #### Progress:
 - Leaderboard: 
-  - Route created in backend, but not implemented in frontend
-- View scored points for whole course when in a lecture or exercise
+  - :heavy_check_mark: Route created in back-end
+  - :x: Leaderboard design implemented in frontend
+- View scored points for the whole course when in a lecture or exercise
 - Fix flow for components
 - Completing course animation
 - Extra points logic
-  - Route created in backend for giving extra points when in a section (answering multiple exercises correctly in a row).
+  - :heavy_check_mark: Route created in back-end for giving extra points when in a section (answering multiple exercises correctly in a row).
+  - :x: Logic implemented in front-end
