@@ -44,3 +44,16 @@ The social-gamified learning experience is a feature that encourages the student
   - :x: Logic implemented in front-end
 
 ---
+
+
+## Offline-Accessibility 
+
+#### Description: 
+
+
+#### Progress: 
+
+- Offline features:
+  - Download a course: Function created to download all data relating to a course from the backed. The locally stored data is arranged in the same manner the frontend expect from the backend. All data with one exception is store in the cache using asyncStorage. The key schema is a capital letter corresponding to the first letter of the component (ex. I for image) + the ID of the parent object (ex. I + componentID for images). The exception is videos, which are stored as base64 in a jason file.  
+  - Managing data fetching when offline/online: StorageService and NetworkService manage and control if the app should fetch the data from the backend or use locally stored data. They have not been implemented in the point system as there where not time left when it was introduced. These services could be improved by having StorageService partitioned into a a controler managing
+  - Access course when offline: 
