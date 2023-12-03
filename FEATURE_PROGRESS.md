@@ -6,7 +6,7 @@ This file exclusively shows features progress - see [FEATURES.md](FEATURES.md) f
 
 - [Certificate Issuance System](#certificate-issuance-system)
 - [Social Gamified Learning Experience](#social-gamified-learning-experience)
-
+- [Mobile Offline Mode](#mobile-offline-mode)
 ---
 
 ## Certificate Issuance System
@@ -46,14 +46,19 @@ The social-gamified learning experience is a feature that encourages the student
 ---
 
 
-## Offline-Accessibility 
+## Mobile Offline Mode
 
 #### Description: 
-
+The Mobile Offline Mode is designed to ensure continuous access to Educado's resources, even in the absence of an internet connection. Tailored for users with inconsistent internet access, especially in underprivileged areas, this feature ensures uninterrupted learning.
 
 #### Progress: 
 
-- Offline features:
+**Offline features**
+
   - Download a course: Function created to download all data relating to a course from the backed. The locally stored data is arranged in the same manner the frontend expect from the backend. All data with one exception is store in the cache using asyncStorage. The key schema is a capital letter corresponding to the first letter of the component (ex. I for image) + the ID of the parent object (ex. I + componentID for images). The exception is videos, which are stored as base64 in a jason file.  
-  - Managing data fetching when offline/online: StorageService and NetworkService manage and control if the app should fetch the data from the backend or use locally stored data. They have not been implemented in the point system as there where not time left when it was introduced. These services could be improved by having StorageService partitioned into a a controler managing
-  - Access course when offline: 
+  
+  - Managing data fetching when offline/online: StorageService and NetworkService manage and control if the app should fetch the data from the backend or use locally stored data. They have not been implemented in the point system as there where not time left when it was introduced. These services could also be improved by having StorageService partitioned into a controler managing.
+  
+  - Access course when offline: You can access all the sections/lectures/exercises of a downloaded course when offline.  However, beacuse of time limitations, the tracking of point system, as well as the users progress, **does not** work when offline. An idea could be to track the users progress and points in AsyncStorage when offline.
+
+  - Another feature that is not yet implemented, is the ability to download specific sections, instead of the full course. 
