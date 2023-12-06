@@ -85,6 +85,26 @@ The Mobile Offline Mode is designed to ensure continuous access to Educado's res
 Content creator website is made for the Educados content creators to view, edit, and create courses and the content for them.
 
 #### Progress:
+- Login and Signup
+  - ✔️ A new user can sign up
+  - ✔️ A user can log in
+  - ✔️ A user can not log in, unless they are approved
+  - ✔️ A freelance Content Creator can apply to the site, by making an application
+  - ✔️ A Content Creator from an institution can sign up with their email, and be automatically approved
+
+- Profile Editing
+  - ✔️ A user can view their information on the profile page
+  - :x: A user can edit all their information
+  - :x: A user can add new information (e.g LinkedIn, Biography etc.)
+  - :x: A user can edit, add, or delete their education information
+  - :x: A user can edit, add, or delete their work experience information
+ 
+- Institutional Onboarding
+  - :x: Only Admins are allowed on the Admin pages
+  - ✔️ A user can view all pending Content Creator Applications
+  - ✔️ A user can reject of approve a Content Creator Application
+  - ✔️ A user can add new Institutions, whose email domain will be used to approve new Content Creators
+
 - Course:
   - :heavy_check_mark: A courses can be created
   - :heavy_check_mark: A courses can be edited
