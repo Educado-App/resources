@@ -54,8 +54,29 @@ The Mobile Offline Mode is designed to ensure continuous access to Educado's res
 #### Progress: 
 - **Download a course:** Function created to download all data relating to a course from the backed. The locally stored data is arranged in the same manner the frontend expect from the backend. All data with one exception is store in the cache using asyncStorage. The key schema is a capital letter corresponding to the first letter of the component (ex. I for image) + the ID of the parent object (ex. I + componentID for images). The exception is videos, which are stored as base64 in a jason file.
   
-- **Managing data fetching when offline/online:** StorageService and NetworkService manage and control if the app should fetch the data from the backend or use locally stored data. They have not been implemented in the point system as there where not time left when it was introduced. These services could also be improved by having StorageService partitioned into a controler managing.
+- **Managing data fetching when offline/online:** StorageService and NetworkService manage and control if the app should fetch the data from the backend or use locally stored data. They have not been implemented in the point system as there where not time left when it was introduced.
   
 - **Access course when offline:** You can access all the sections/lectures/exercises of a downloaded course when offline.  However, beacuse of time limitations, the tracking of point system, as well as the users progress, **does not** work when offline. An idea could be to track the users progress and points in AsyncStorage when offline.
 
 - **Download only specific sections:** Another feature that is not yet implemented. 
+
+#### Known issues/improvements  
+
+  
+
+- **Name scheme for individual users:** At the moment the course object is saved with a unique key (userID + courseID), but the rest of the elements are not assigned a key that is unique to the user. The solution to this would be to just add the userID to all keys. Another related/similar issue is how the videos is saved.  They have the same problems, but it should not be solved in the same suggested way as the video files take up a lot of storage space. One solution could be to have a counter stored, to count how many times a video has been downloaded. In fact, this might be a better solution for all the stored objects. That way you don’t have duplicates and only have to change the counter and delete a course object when a course has been downloaded by multiple users.  
+
+  Why: Because this will allow multiple users using the same device to not accidentally delete saved courses from each other.  
+
+- **Dividing StorageService into multiple files:** StorageService is quite large and handle multiple tasks, it also doesn’t adhere to the three-layer structure.  
+
+  An approach to this is to separate the store functionality and the control functionality so one you have a controller that governs whether it should fetch data from the backend or the local storage, and a storage manager that manage storage and ODM functions. This would also help to adhere to the three-layer structure.  
+
+  If you want to separate it more, you could divide Storage and ODM functions, or separate user storage and course storage. 
+
+  An issue has also been made for this https://github.com/Educado-App/educado-mobile/issues/219#issue-2014293688 
+
+- **Points not working offline:** Points does not work offline, this is because all the logic for handling it is on the backend and the point system does not use StorageService for backend calls. The fix would be to move the logic into StorageService, and have all calls to the backend go through StorageService. This would also help in adhering to the three-layer structure.
+
+
+---
