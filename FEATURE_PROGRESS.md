@@ -7,6 +7,7 @@ This file exclusively shows features progress - see [FEATURES.md](FEATURES.md) f
 - [Certificate Issuance System](#certificate-issuance-system)
 - [Social Gamified Learning Experience](#social-gamified-learning-experience)
 - [Mobile Offline Mode](#mobile-offline-mode)
+- [Content creator website](#content-creator-website)
 ---
 
 ## Certificate Issuance System
@@ -78,5 +79,48 @@ The Mobile Offline Mode is designed to ensure continuous access to Educado's res
 
 - **Points not working offline:** Points does not work offline, this is because all the logic for handling it is on the backend and the point system does not use StorageService for backend calls. The fix would be to move the logic into StorageService, and have all calls to the backend go through StorageService. This would also help in adhering to the three-layer structure.
 
+
+## Content creator website
+#### Description:
+Content creator website is made for the Educados content creators to view, edit, and create courses and the content for them.
+
+#### Progress:
+- Course:
+  - :heavy_check_mark: A courses can be created
+  - :heavy_check_mark: A courses can be edited
+  - :x: Cover image upload   
+  - :x: Cover image has a size limit 
+  - :heavy_check_mark: The list of sections can be reorder in the course 
+  - :x: The ordered list of sections can be saved
+  - :heavy_check_mark: A courses "description" has a length limit
+  - :x: A courses "name" has length limit  
+
+- Sections:
+  - :heavy_check_mark: A section can be created
+  - :heavy_check_mark: A section can be edited
+  - :heavy_check_mark: A lectures can be add to the section
+  - :heavy_check_mark: A exercises can be add to the section
+  - :heavy_check_mark: The list of lectures and exercises can be reorder in the section
+  - :heavy_check_mark: The ordered list of lectures and exercises can be saved
+  - :x: Upon saving incorrectly ("name" or "description" field empty), show an error message instead of a success message.
+  - :heavy_check_mark: Component (lectures and exercises) counter is visually implemented.
+  - :x: Component (lectures and exercises) counter is functionally implemented.
+  - :x: A sections "name" and "description" has a length limit  
+
+- Lectures:
+  - :heavy_check_mark: A lecture can be created
+  - :heavy_check_mark: A lecture can be edited
+  - :heavy_check_mark: A lecture can be deleted
+  - :x: A lecture can be previewed in phone view
+  - :x: Video upload
+  - :x: Video has a size limit 
+  - :x: A lectures "name" and "description" has a length limit 
+
+- Exercises:
+  - :heavy_check_mark: A exercise can be created
+  - :heavy_check_mark: A exercise can be edited
+  - :heavy_check_mark: A exercise can be deleted
+  - :x: A exercise can be previewed in phone view
+  - :x: A exercises "name", "question", "answer", and "feedback" has a length limit 
 
 ---
