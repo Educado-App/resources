@@ -88,6 +88,7 @@ Content creator website is made for the Educados content creators to view, edit,
 - Course:
   - :heavy_check_mark: A courses can be created
   - :heavy_check_mark: A courses can be edited
+  - :heavy_check_mark: A courses can be deleted
   - :x: Cover image upload   
   - :x: Cover image has a size limit 
   - :heavy_check_mark: The list of sections can be reorder in the course 
@@ -95,9 +96,11 @@ Content creator website is made for the Educados content creators to view, edit,
   - :heavy_check_mark: A courses "description" has a length limit
   - :x: A courses "name" has length limit  
 
+
 - Sections:
   - :heavy_check_mark: A section can be created
   - :heavy_check_mark: A section can be edited
+  - :heavy_check_mark: A section can be deleted
   - :heavy_check_mark: A lectures can be add to the section
   - :heavy_check_mark: A exercises can be add to the section
   - :heavy_check_mark: The list of lectures and exercises can be reorder in the section
