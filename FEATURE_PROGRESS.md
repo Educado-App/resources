@@ -104,6 +104,7 @@ Content creator website is made for the Educados content creators to view, edit,
   - ✔️ A user can view all pending Content Creator Applications
   - ✔️ A user can reject of approve a Content Creator Application
   - ✔️ A user can add new Institutions, whose email domain will be used to approve new Content Creators
+  - :x: A Content Creator is not connected directly to their Institution, database-wise
 
 - Course:
   - :heavy_check_mark: A courses can be created
