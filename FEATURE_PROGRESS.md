@@ -141,10 +141,16 @@ Content creator website is made for the Educados content creators to view, edit,
   - :x: A lectures "name" and "description" has a length limit 
 
 - Exercises:
-  - :heavy_check_mark: A exercise can be created
-  - :heavy_check_mark: A exercise can be edited
-  - :heavy_check_mark: A exercise can be deleted
-  - :x: A exercise can be previewed in phone view
-  - :x: A exercises "name", "question", "answer", and "feedback" has a length limit 
+  - :heavy_check_mark: An exercise can be created
+  - :heavy_check_mark: An exercise can be edited
+  - :heavy_check_mark: An exercise can be deleted
+  - :x: An exercise can be previewed in the phone view
+  - :x: An exercises "name", "question", "answer", and "feedback" has a length limit 
+
+####Side note
+Linting on the frontend repository, which is the website, gave over 2500 errors when our semester (5th semester of Fall 2023) started.
+650+ needed to be fixed manually, which was deemed too time-consuming to prioritize. Throughout the semester, that number was whittled down to around 160 errors.
+This means that currently, the code will give errors when running linting on it.
+This is also the reason why the frontend GitHub action for linting isn't set up, as it would just give an error every time.
 
 ---
