@@ -147,7 +147,7 @@ Content creator website is made for the Educados content creators to view, edit,
   - :x: An exercise can be previewed in the phone view
   - :x: An exercises "name", "question", "answer", and "feedback" has a length limit 
 
-####Side note
+#### Side note
 Linting on the frontend repository, which is the website, gave over 2500 errors when our semester (5th semester of Fall 2023) started.
 650+ needed to be fixed manually, which was deemed too time-consuming to prioritize. Throughout the semester, that number was whittled down to around 160 errors.
 This means that currently, the code will give errors when running linting on it.
