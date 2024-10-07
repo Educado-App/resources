@@ -74,7 +74,7 @@ If you're contributing code to our project, this pull request template streamlin
 Feel free to explore these files, contribute to our project, and be part of our vibrant community. Your input is valuable to us, and together we can shape the future of ProjectX!
 
 ### PULL_REQUEST_PROCESS.md
-[Go to PR Process](./PULL_REQUEST_PROCESS.md)
+[Go to PR process guide](./PULL_REQUEST_PROCESS.md)
 
 Follow this guide if you are unsure about how to go about a pull request.
 
