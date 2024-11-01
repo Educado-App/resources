@@ -46,6 +46,12 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0015** Invalid time interval. Use "day", "week", "month" or "all".
 - **E0016** Invalid parameters.
 - **E0017** Service Unavailable.
+- **E0018** 'No Feedbackoptions found'
+- **E0019** 'Feedback could not be saved'
+- **E0020** 'Feedback must contain a rating'
+- **E0021** 'Feedback options must be an array'
+-	**E0022** 'Could not save feedback entry'
+=	**E0023** 'Could not save feedback options when populating database'
 
 
 ## E01 Login Errors
