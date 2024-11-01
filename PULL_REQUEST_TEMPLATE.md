@@ -21,6 +21,8 @@ List any related issues or tickets that this pull request addresses or resolves.
 - [ ] Reviewers have been assigned to the pull request.
 - [ ] Any potential security implications have been considered and addressed.
 - [ ] Performance impact of the changes has been evaluated, if relevant.
+- [ ] Changes have been approved by Product Owner
+- [ ] Code has been analyzed with CodeScene
 
 ## Screenshots (if applicable)
 
