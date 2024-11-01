@@ -23,6 +23,7 @@ List any related issues or tickets that this pull request addresses or resolves.
 - [ ] Performance impact of the changes has been evaluated, if relevant.
 - [ ] Changes have been approved by Product Owner
 - [ ] Code has been analyzed with CodeScene
+- [ ] I have reviewed the pull request myself
 
 ## Screenshots (if applicable)
 
