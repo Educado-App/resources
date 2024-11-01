@@ -46,12 +46,6 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0015** Invalid time interval. Use "day", "week", "month" or "all".
 - **E0016** Invalid parameters.
 - **E0017** Service Unavailable.
-- **E0018** 'No Feedbackoptions found'
-- **E0019** 'Feedback could not be saved'
-- **E0020** 'Feedback must contain a rating'
-- **E0021** 'Feedback options must be an array'
--	**E0022** 'Could not save feedback entry'
-=	**E0023** 'Could not save feedback options when populating database'
 
 
 ## E01 Login Errors
@@ -146,3 +140,11 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1202** This Institution already exists 
 - **E1203** This Email Domain already exists as part of another Institution
 - **E1204** This Secondary Email Domain already exists as part of another Institution
+
+## E13 Feedback Errors
+- **E1301** 'No Feedbackoptions found'
+- **E1302** 'Feedback could not be saved'
+- **E1303** 'Feedback must contain a rating'
+- **E1304** 'Feedback options must be an array'
+-	**E1305** 'Could not save feedback entry'
+-	**E1306** 'Could not save feedback options when populating database'
