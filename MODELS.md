@@ -5,8 +5,9 @@
   
 | Date | Notes |
 | --- | --- |
-| 2023-Oct-11 | 1st release of the Models overview |
-| 2023-Nov-07 | Completed rework of User model with student and content-creator subprofiles |
+| 2023-Oct-11 | 1st release of the Models overview. |
+| 2023-Nov-07 | Completed rework of User model with student and content-creator subprofiles. |
+| 2024-Nov-01 | Added Feedbacks, FeedbackOptions and updated the Courses model. |
 
 </details>
 
@@ -18,6 +19,8 @@
 - [Sections](#sections)
 - [Lectures](#lectures)
 - [Exercises](#exercises)
+- [Feedbacks](#feedbacks)
+- [Feedback-Options](#feedback-options)
 
 ### Users
 
@@ -82,7 +85,14 @@
 | status | `String` | The current status of the course | (✔) | ✔ | `'draft'`, `'published'`, or `'hidden'`
 | estimatedHours | `Number` | The number of hours it is estimated to take to complete the course. ||| Any positive `Number` with up to two decimals.
 | rating | `Number` | The average rating of the course from users. | (✔) || A `Number` with up to two decimals between 0.0 and 5.0
+| numOfRatings | `Number` | The number of ratings given to a course, used to calculate the average. | (✔)|| A positive `Number` (`Integer`) 
 | numOfSubscriptions | `Number` | The total number of users currently subscribed to the course. | TBD | | Any positive `Integer` or 0
+| feedbackOptions | `Array<feedbackOptionsSubSchema>` | An Array of feedback options sub schema, which contains id for a feedback option and a count for number of times the option has been given. Used in showing the top options given to a course. ||| An `Array<feedbackOptionsSubSchema>` or an empty `Array`: [].
+|--------------------|---------------------------------|-----------------------------------------------------------------------------|---------|-------------|---------|
+| feedbackOptionsSubSchema.optionId | `ObjectId` | An `ObjectId` referencing the feedbackoptions collection. ||| An `ObjectId` that exists in the feedbackoptions collection to describe a specific option.
+| feedbackOptionsSubSchema.count | `Number` | A `Number` describing the amount of times the option has been given as a feedback to the course. ||| Any positive `Number` (`Integer`) or 0.
+
+
 
 
 ### Sections
@@ -189,6 +199,28 @@
 | id | `ObjectId` | Identifier for the object. | ✔ || A 12-byte hexadecimal `string`.
 | courseId | `ObjectId` | Reference to the course which has been created. | | ✔ | An `ObjectId` referencing a course
 | creatorId | `ObjectId` | Reference to the content creator to whom the certificate belongs. | | ✔ | An `ObjectId` referencing a user
+
+### Feedbacks
+
+**Description:** The feedback model represents a feedback entry from a student about a specific course. Entries are created from the app and to be used on the web for statistics and overview.
+
+| FieldName | Type | Description | Generated | Required  | Possible values  
+|---| --- | --- | :-: | :-: | ---
+| _id | `ObjectId` | Identifier for the object. | ✔ || A 12-byte hexadecimal `string`.
+| courseId | `ObjectId` | Reference to the course that we are giving feedback to. || ✔ | An `ObjectId` referencing a course.
+| rating | `Number` | A rating by the student for the specific course. ||✔| A `number` between 1 and 5.
+| feedbackText | `String` | A string containing user given feedback. ||| A `String`.
+| feedbackOptions | `Array<ObjectId>` | An array of object ids describing which feedback options was given along with this feedback entry. ||| An `Array` of `ObjectId` that are present in the `feedbackoptions` collection, or an empty array.
+| dateCreated | `Date` | The date and time for the creation of the feedback entry. |✔|| Any `Date` in the past.
+
+### Feedback-Options
+
+**Description:** The feedback model represents a feedback entry from a student about a specific course. Entries are created from the app and to be used on the web for statistics and overview.
+
+| FieldName | Type | Description | Generated | Required  | Possible values  
+|---| --- | --- | :-: | :-: | ---
+| _id | `ObjectId` | Identifier for the object. | ✔ || A 12-byte hexadecimal `string`.
+| name | `String` | Name for the feedback option. Used on feedback page, explore page and later on the Web for overview. ||✔| A `String` describing the specific feedback option.
 
 ### Notes
 
