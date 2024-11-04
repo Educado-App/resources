@@ -143,8 +143,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 
 ## E13 Feedback Errors
 - **E1301** 'No Feedbackoptions found'
-- **E1302** 'Feedback could not be saved'
+- **E1302** 'Could not save feedback entry'
 - **E1303** 'Feedback must contain a rating'
 - **E1304** 'Feedback options must be an array'
--	**E1305** 'Could not save feedback entry'
--	**E1306** 'Could not save feedback options when populating database'
+-	**E1305** 'Could not save feedback options when populating database'
+-	**E1306** 'Rating must be between 1 and 5'
