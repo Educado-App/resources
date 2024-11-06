@@ -140,6 +140,8 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1202** This Institution already exists 
 - **E1203** This Email Domain already exists as part of another Institution
 - **E1204** This Secondary Email Domain already exists as part of another Institution
+- **E1205** This name already exists as part of another Institution
+- **E1206** Institution not found
 
 ## E13 Feedback Errors
 - **E1301** 'No Feedbackoptions found'
