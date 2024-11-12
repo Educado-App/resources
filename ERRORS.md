@@ -126,6 +126,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1004** Could not reject Content Creator
 - **E1005** Could not get Content Creator application
 - **E1006** Could not upload application
+- **E1007** Could not save Content Creator application forms to database!
 
 ## E11  Component Errors
 - **E1101** The component array has reached its maximum size
