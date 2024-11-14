@@ -46,7 +46,7 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E0015** Invalid time interval. Use "day", "week", "month" or "all".
 - **E0016** Invalid parameters.
 - **E0017** Service Unavailable.
-- **E0018** Failed to delete some or all user data from database!
+- **E0018** Failed to delete all account data from database!
 
 ## E01 Login Errors
 
