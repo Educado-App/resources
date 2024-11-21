@@ -26,7 +26,7 @@ This file gives an overview of the common components used in educado-mobile. Ple
 
 ### DEVOPS.md
 
-[Go to DevOps](./DEVOPSS.md)
+[Go to DevOps](./DEVOPS.md)
 
 This file gives an overview of DevOps are used in this project. It mainly explains the implementation of the CI/CD pipeline for educado-mobile.
 
