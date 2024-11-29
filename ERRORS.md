@@ -151,3 +151,17 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1304** 'Feedback options must be an array'
 -	**E1305** 'Could not save feedback options when populating database'
 -	**E1306** 'Rating must be between 1 and 5'
+
+## E14 Course Creation Errors
+- **E1401** 'Could not save course'
+- **E1402** 'Could not save section'
+- **E1403** 'Could not save components'
+- **E1404** 'Could not save lecture'
+- **E1405** 'Could not Save exercise'
+- **E1406** 'Could not save media'
+- **E1407** 'Could not delete sections'
+- **E1408** 'Could not delete components'
+- **E1409** 'Could not update exercise'
+- **E1410** 'Could not update lecture'
+- **E1411** 'Could not update section'
+- **E1412** 'Could not update course'
