@@ -24,6 +24,7 @@ List any related issues or tickets that this pull request addresses or resolves.
 - [ ] Changes have been approved by Product Owner
 - [ ] Code has been analyzed with CodeScene
 - [ ] I have reviewed the pull request myself
+- [ ] I have merged the latest version of dev into my branch and resolved conflicts
 
 ## Screenshots (if applicable)
 
