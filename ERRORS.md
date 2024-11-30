@@ -166,3 +166,4 @@ Both the frontend(s) and backend contain an `errorCodes.js` file, implementing t
 - **E1410** 'Could not update lecture'
 - **E1411** 'Could not update section'
 - **E1412** 'Could not update course'
+- **E1413** 'Could not find section in database'
