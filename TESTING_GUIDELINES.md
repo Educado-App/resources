@@ -262,6 +262,70 @@ describe('Dogs', () => {
 
 <i>More info can be found here: https://jestjs.io/docs/api#aftereachfn-timeout</i>
 
+## How do i unit test react hooks or contexts that manages state?
+When testing React Hooks or Context that manage complex state, you should use the @testing-library/react-hooks library in your Jest test file. 
+
+### Wrapper
+For hooks that depend on React Context or other providers, you need to wrap your hook in a custom wrapper during testing. This ensures the hook has access to all required providers.
+
+```javascript
+...
+import { renderHook } from '@testing-library/react-hooks';
+import { MyContextProvider } from '../context/MyContext';
+
+const wrapper = ({ children }: { children: React.ReactNode }) => (
+  <MyContextProvider>{children}</MyContextProvider>
+);
+
+const { result } = renderHook(() => useMyCustomHook(), { wrapper });
+
+```
+
+### Act
+Act
+When testing React state updates, you must use act() to wrap any function calls that trigger state changes. This ensures all updates are properly propagated, and React's state mechanism remains consistent.
+
+```javascript
+...
+import { renderHook, act } from '@testing-library/react-hooks';
+import useCounter from '../hooks/useCounter'; // Custom hook to manage a counter
+
+const { result } = renderHook(() => useCounter());
+
+act(() => {
+  result.current.increment(); // Triggers a state update
+});
+```
+
+### Assertions 
+After triggering state updates, use expect() to validate the resulting state or behavior.
+
+```javascript
+...
+act(() => {
+  result.current.decrement(); // Assume decrement reduces count
+});
+expect(result.current.count).toBe(0);
+
+```
+
+### Edge Cases 
+To ensure robust tests, handle edge cases like empty, null, or undefined values, or unexpected user inputs.
+```javascript
+...
+act(() => {
+  result.current.setCount(null); // Set state to null
+});
+
+expect(result.current.count).toBe(0); // Default behavior: fallback to 0
+
+
+```
+
+
+
+
+
 ## Running unit tests
 
 All tests in the repository can be run using:
